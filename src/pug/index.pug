@@ -1,6 +1,4 @@
-include ./mixins.pug
-
-<!DOCTYPE html>
+doctype html
 html(lang='rus')
   head
     meta(charset='UTF-8')
@@ -10,8 +8,6 @@ html(lang='rus')
   body
     .wrapper
       .container
-        include ./pug/section_hero
-        include ./pug/section_myCard
-        include ./pug/section_skills
-        
-        
+        +image('content/user.jpg', 'user-pic')
+        +icon('link', 'link-class')
+          .icon-bg 
