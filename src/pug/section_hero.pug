@@ -1,23 +1,29 @@
 section.section.section__hero
-  header.header
-    a.header__logo-link(href='#')
-      h2.header__logo-init ЧС
+  .container.hero__container
+    .section__hero-header
+      header.header
+        a.header__logo-link(href='#')
+          h2.header__logo-init ЧС
         +navigation('navigation', ['Главная', 'Обо мне', 'Навыки', 'Работы', 'Отзывы', 'Связаться'], 0)
-    .social.header__social
-      ul.social__list
-        li.social__list-elem
-          a.social__link(href='#')
-        li.social__list-elem
-          a.social__link(href='#')
-        li.social__list-elem
-          a.social__link(href='#')
-  .hero__content
-    h1.hero__content-headline Черепанов Сергей
-    .hero__content-table
-      | Личный сайт 
-      br
-      |  веб разработчика
-    // прикрутить абсолютом
-  .hero__scroll
-    p.hero__scroll-name Скролл
-    .hero__scroll-icon
+        .social.header__social
+          ul.social__list
+            - var socials = ['insta', 'vk', 'github'];
+            each item in socials
+              li.socials__item
+                a(href="#").socials__link
+                  +icon(`${item}`, 'socials__icon')
+    .hero__content
+      h1.hero__content-headline
+        | Сергей
+        br 
+        | Черепанов
+      .hero__content-table
+        | Личный сайт 
+        br
+        |  веб разработчика
+      // прикрутить абсолютом
+    .hero__scroll-button
+      a(href="#").hero__scroll Скролл
+        .hero__scroll-icon
+          +icon(`scroll`, 'hero__scroll-icon__svg')
+
