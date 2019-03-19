@@ -1,0 +1,214 @@
+
+.my-works__headline {
+    display: inline-block;
+    font-size: 36px;
+    text-align: left;
+    font-weight: bold;
+    color: #475360;
+    margin: 100px 0;
+}
+
+.my-works__content {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    margin-bottom: 100px;
+}
+
+.my-works__content-left {
+    margin-right: 150px;   
+}
+
+.slider {
+    height: 50%;
+    width: 630px;
+    overflow: hidden;
+    position: relative; 
+    z-index: 100;
+}
+
+.slider__background-elem {
+    display: none;
+    height: 100%;
+    width: 100%;
+   
+}
+
+.slider__background-elem__active {
+    display: block;
+}
+
+.slider__background-image {
+    vertical-align: middle;
+    min-height: 100%;
+    min-width: 100%;
+    
+}
+
+.slider__content {
+    position: absolute;
+    top: 65%;
+    right: 0;
+    width: 21.4375rem;
+    height: 100px;
+    max-width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.slider__content-list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.slider__content-elem {
+    width: 177px;
+}
+
+.slider__elem-image {
+    width: 100%;
+
+    /* &:hover {
+         border: 5px  solid #ed7f00;
+    } */
+}
+
+.slider__content-elem__active {
+    border: 5px  solid #ed7f00;
+}
+
+.preview__slider-container {
+    position: relative;
+}
+
+.slider__button {
+    position: absolute;
+    top: 65%;
+    right: -49px;
+    width: 50px;
+    height: 100px;
+    background-color: #2d3c4e;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    z-index: 101;
+}
+
+.slider__button-arrow {
+    height: 15px;
+    width: 15px;
+    fill: #6c7783;
+    margin: 0;
+    cursor: pointer;
+    
+    
+
+    &:hover {
+        fill: #ffffff;
+    }
+
+    &.right {
+        transform: rotate(180deg);
+    }
+
+    &.white__style {
+        position: absolute;
+        fill: #ffffff;
+        transform: translate(-50%, -50%);
+
+        &.left {
+           transform: rotate(180deg) translate(50%, 50%); 
+           top: 53%;
+           left: 47%;
+        }
+
+        &.right {
+            top: 47%;
+            left: 53%;
+        }
+    }
+}
+
+.slider__number-slide {
+    position: absolute;
+    font-size: 300px;
+    color: #ececec;
+    font-weight: bold;
+    top: -100px;
+    right: -130px;
+    height: 300px;
+    margin: 0;
+}
+
+.slider__number-slide__digit {
+    height: 100%;
+    margin: 0;
+}
+
+.loftschool__review {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+   
+}
+
+.loftschool__review-site__link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+    color: #4b6fd7;
+     font-weight: bold;
+     font-size: 18px;
+     height: 30px;
+     
+}
+
+.loftschool__review-site__link-icon {
+    width: 15px;
+    height: 15px;
+    fill: #4b6fd7;
+    margin-bottom: 10px;
+}
+
+.loftschool__review-site__link-text {
+    margin-left: 10px;
+    text-align: end;
+}
+
+.loftschool__review-tchnology__list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.loftschool__review-tchnology__elem {
+    margin-right: 20px;
+    padding: 20px 30px;
+    background-color: #f1f5f9;
+    border-radius: 30px;
+     font-size: 15px;
+     font-weight: 700;
+     color: #646d77;
+
+    &:last-child {
+        margin-right: 0;
+    }
+}
+
+.headline__color-black {
+    color: #2d3c4e;
+    font-weight: bold;
+    line-height: 1.6;
+    font-size: 30px;
+    margin: 50px 0;
+}
+
+.loftschool__review-paragraph {
+    color: #9299a1;
+}

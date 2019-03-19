@@ -1,0 +1,99 @@
+.skills__container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.headline-third-level {
+    font-size: 30px;
+    font-weight: 700;
+    line-height: 2.5;
+    color: #ffffff;
+}
+
+.useful__paragraph {
+    line-height: 1.875;
+}
+
+.skills__level {
+    margin-top: 100px;
+    height: 500px;
+    width: 95%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: flex-end;
+    z-index: 1000;
+}
+
+.skills__level-diagrams__list {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.headline-fourth-level {
+    font-size: 24px;
+    font-weight: bold;
+    line-height: 2;
+    color: #ffffff;
+}
+
+.skills__level-diagrams__svg {
+    width: 150px;
+}
+
+.skills__level-diagrams__elem {
+    margin-right: 30px;
+
+    &:last-child {
+        margin-right: 0;
+    }
+}
+
+.skills__level-diagrams__skill {
+    position: relative;
+    width: 9.375rem;
+    height: 9.375rem;
+}
+
+.skills__level-diagrams__tool {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #989594;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+
+.skills__level-diagrams__svg {
+    transform: rotate(-180deg);
+}
+
+.circle {
+    fill: transparent;
+    stroke-width: 5px;
+    stroke: #423e3d;
+}
+
+.circle__above {
+    stroke-width: 10px;
+    stroke: #ed7f00;
+    stroke-dasharray: 15.68rem;
+    stroke-dashoffset: 15.68rem;
+    animation: fill 100s linear infinite;
+    animation-play-state: paused; 
+}
+
+@keyframes fill {
+    from {
+        stroke-dashoffset: 15.68rem;
+    }
+
+    to {
+        stroke-dashoffset: 0;
+    }
+}

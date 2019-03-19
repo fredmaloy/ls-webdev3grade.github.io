@@ -1,0 +1,53 @@
+.leaves
+    +image('content/leaves.png', 'leaves')
+section.section.section__comments
+    .container.comments__container
+        .section__comments-headline
+            h2.headline_second-level.comments__headline Что обо мне говорят
+            .slider__comments-buttons
+                .slider__comments-button__circle
+                    svg.slider__comments-circle__svg(viewBox='0 0 100 100', preserveAspectRatio='none')
+                        circle.circle__comment(cx='50', cy='50', r='40')
+                    .slider__button-arrow.left.white__style
+                        +icon(`arrow-down`, '.slider__button-arrow__left-svg')
+                .slider__comments-button__circle
+                    svg.slider__comments-circle__svg(viewBox='0 0 100 100', preserveAspectRatio='none')
+                        circle.circle__comment(cx='50', cy='50', r='40')
+                    .slider__button-arrow.right.white__style
+                        +icon(`arrow-down`, '.slider__button-arrow__right-svg')
+        .comments__content
+            ul.comments__content-list
+                li.comments__content-elem
+                    .quote
+                        +icon(`quote`, '.quote-svg')
+                    .comments__content-elem__feedback
+                        .comments__content-elem__feedback-text 
+                            | Этот код выдержит любые испытания.
+                            br
+                            | Только пожалуйста, не загружайте сайт на
+                            br
+                            | слишком старых браузерах
+                        .comments__content-elem__feedback-user-card
+                            .feedback-user-card-image       
+                                +image('content/my_photo.png', 'user-pic comments')
+                            .feedback-user-card-info
+                                .feedback-user-card-name Владимир Сабанцев
+                                .feedback-user-card-position Преподаватель
+                li.comments__content-elem
+                    .quote
+                        +icon(`quote`, '.quote-svg')
+                    .comments__content-elem__feedback
+                        .comments__content-elem__feedback-text 
+                            | Этот парень проходил обучение
+                            br
+                            | веб-разработке не где-то, а в LoftSchool!
+                            br
+                            | 4,5 месяца только самых тяжелых
+                            br
+                            | испытаний и бессонных ночей!
+                        .comments__content-elem__feedback-user-card
+                            .feedback-user-card-image       
+                                +image('content/my_photo.png', 'user-pic comments')
+                            .feedback-user-card-info
+                                .feedback-user-card-name Ковальчук Дмитрий
+                                .feedback-user-card-position Основатель Loftschool

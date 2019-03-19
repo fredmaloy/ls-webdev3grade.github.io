@@ -3,7 +3,7 @@ section.section.section__hero
     .section__hero-header
       header.header
         a.header__logo-link(href='#')
-          h2.header__logo-init ЧС
+          h2.headline_second-level.header__logo-init ЧС
         +navigation('navigation', ['Главная', 'Обо мне', 'Навыки', 'Работы', 'Отзывы', 'Связаться'], 0)
         .social.header__social
           ul.social__list
@@ -13,11 +13,11 @@ section.section.section__hero
                 a(href="#").socials__link
                   +icon(`${item}`, 'socials__icon')
     .hero__content
-      h1.hero__content-headline
+      h1.headline__first-level.hero__content-headline
         | Сергей
         br 
         | Черепанов
-      .hero__content-table
+      .description.hero__content-table
         | Личный сайт 
         br
         |  веб разработчика
