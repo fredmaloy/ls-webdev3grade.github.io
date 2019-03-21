@@ -1,4 +1,18 @@
 section.section.section__hero
+  .parallax__bacground-layer__one
+    +image('content/hero_bg1.jpg', 'paralax__bacground-image')
+  .hero__content
+      h1.headline__first-level.hero__content-headline
+        | Сергей
+        br 
+        | Черепанов
+      .description.hero__content-table
+        | Личный сайт 
+        br
+        |  веб разработчика
+      // прикрутить абсолютом
+  .parallax__bacground-layer__two
+    +image('content/hero_bg2.png', 'paralax__bacground-image')
   .container.hero__container
     .section__hero-header
       header.header
@@ -12,16 +26,6 @@ section.section.section__hero
               li.socials__item
                 a(href="#").socials__link
                   +icon(`${item}`, 'socials__icon')
-    .hero__content
-      h1.headline__first-level.hero__content-headline
-        | Сергей
-        br 
-        | Черепанов
-      .description.hero__content-table
-        | Личный сайт 
-        br
-        |  веб разработчика
-      // прикрутить абсолютом
     .hero__scroll-button
       a(href="#").hero__scroll Скролл
         .hero__scroll-icon
