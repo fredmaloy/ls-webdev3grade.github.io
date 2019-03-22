@@ -1,18 +1,48 @@
-.parallax__bacground-layer__one {
+.parallax {
+    position: relative;
+    overflow: hidden;
+    height: 1300px;
+    width: 100%;
+}
+
+.parallax__layer {
     position: absolute;
     top: 0;
     left: 0;
+    width: 100%;
+    height: 100%;
+
+    &:nth-child(1) {
+        .parallax__bacground-image {
+            top: 0;
+            left: 0;
+        }
+    }
+
+    &:nth-child(2) {
+        .hero__content {  
+            position: relative; 
+            width: 450px;         
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            margin-top: -16.5rem;
+            color: #ffffff;
+            margin-left: 137px;
+        }
+    }
+
+    &:nth-child(3) {
+        .parallax__bacground-image {            
+            top: 0;
+            left: 0;
+            margin-top: 23.5rem;
+        }
+    }
+
 }
 
-.parallax__bacground-layer__two {
-    position: absolute;
-    top: 0;
-    left: 0;
-    margin-top: 23.5rem;
-    
-}
-
-.paralax__bacground-image {
+.parallax__bacground-image {
     max-width: 100%;
     height: auto;
 }
@@ -31,18 +61,10 @@
 
 .section__hero-header {
     width: 100%;
-    margin: 20px auto;
+    padding-top: 20px;
 }
 
-.hero__content {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%,-50%);
-    margin-top: -15.5rem;
-    color: #ffffff;
-     margin-left: 137px;
-}
+
 
 .description {
     display: block;
@@ -58,10 +80,13 @@
     }
 }
 
+.hero__scroll-button {
+    margin-bottom: 50px;
+}
+
 .hero__scroll {
     display: flex;
     justify-content: center;
-    margin-bottom: 50px;
 }
 
 .hero__scroll-icon {

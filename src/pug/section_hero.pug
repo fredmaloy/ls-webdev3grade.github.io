@@ -1,33 +1,34 @@
 section.section.section__hero
-  .parallax__bacground-layer__one
-    +image('content/hero_bg1.jpg', 'paralax__bacground-image')
-  .hero__content
-      h1.headline__first-level.hero__content-headline
-        | Сергей
-        br 
-        | Черепанов
-      .description.hero__content-table
-        | Личный сайт 
-        br
-        |  веб разработчика
-      // прикрутить абсолютом
-  .parallax__bacground-layer__two
-    +image('content/hero_bg2.png', 'paralax__bacground-image')
-  .container.hero__container
-    .section__hero-header
-      header.header
-        a.header__logo-link(href='#')
-          h2.headline_second-level.header__logo-init ЧС
-        +navigation('navigation', ['Главная', 'Обо мне', 'Навыки', 'Работы', 'Отзывы', 'Связаться'], 0)
-        .social.header__social
-          ul.social__list
-            - var socials = ['insta', 'vk', 'github'];
-            each item in socials
-              li.socials__item
-                a(href="#").socials__link
-                  +icon(`${item}`, 'socials__icon')
-    .hero__scroll-button
-      a(href="#").hero__scroll Скролл
-        .hero__scroll-icon
-          +icon(`scroll`, 'hero__scroll-icon__svg')
+  .parallax
+    .parallax__layer
+      +image('content/hero_bg1.jpg', 'parallax__bacground-image')
+    .parallax__layer
+      .hero__content
+          h1.headline__first-level.hero__content-headline
+            | Сергей
+            br 
+            | Черепанов
+          .description.hero__content-table
+            | Личный сайт 
+            br
+            |  веб разработчика
+    .parallax__layer
+      +image('content/hero_bg2.png', 'parallax__bacground-image')
+    .container.hero__container
+      .section__hero-header
+        header.header
+          a.header__logo-link(href='#')
+            h2.headline_second-level.header__logo-init ЧС
+          +navigation('navigation', ['Главная', 'Обо мне', 'Навыки', 'Работы', 'Отзывы', 'Связаться'], 0)
+          .social.header__social
+            ul.social__list
+              - var socials = ['insta', 'vk', 'github'];
+              each item in socials
+                li.socials__item
+                  a(href="#").socials__link
+                    +icon(`${item}`, 'socials__icon')
+      .hero__scroll-button
+        a(href="#").hero__scroll Скролл
+          .hero__scroll-icon
+            +icon(`scroll`, 'hero__scroll-icon__svg')
 
