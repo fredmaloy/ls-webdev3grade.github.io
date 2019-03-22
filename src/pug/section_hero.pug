@@ -1,8 +1,8 @@
 section.section.section__hero
   .parallax
-    .parallax__layer
+    .parallax__layer(data-speed="0.1")
       +image('content/hero_bg1.jpg', 'parallax__bacground-image')
-    .parallax__layer
+    .parallax__layer(data-speed="0.25")
       .hero__content
           h1.headline__first-level.hero__content-headline
             | Сергей
@@ -12,9 +12,9 @@ section.section.section__hero
             | Личный сайт 
             br
             |  веб разработчика
-    .parallax__layer
+    .parallax__layer(data-speed="0.37")
       +image('content/hero_bg2.png', 'parallax__bacground-image')
-    .container.hero__container
+    .container.hero__container(data-speed="0.25")
       .section__hero-header
         header.header
           a.header__logo-link(href='#')
