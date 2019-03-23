@@ -6,23 +6,14 @@ section.section.section__feedback
             .form__row
                 label.form__block(for="")
                     .form__title Введите ваше имя
-                    .form__input-container
-                        .form__input-icon
-                            +icon(`user`, 'form__input-svg')
-                        input.form__input-elem(type="text", name="name" required)
+                    input.form__input-elem.name-input(type="text", name="name" required)
                 label.form__block(for="")
                     .form__title Введите ваш email
-                    .form__input-container
-                        .form__input-icon
-                            +icon(`envelope`, 'form__input-svg')
-                        input.form__input-elem(type="email", name="name" required)
+                    input.form__input-elem.email-input(type="email", name="email" required)
             .form__row
                 label.form__block(for="")
                     .form__title Сообщение к письму
-                    .form__input-container
-                        .form__input-icon
-                            +icon(`message`, 'form__input-svg')
-                        textarea.form__input-elem(name="comment" required)
+                    textarea.form__input-elem.comment-textarea(name="comment" required)
             .btn__send  
                 button.button(type='submit')
                     .btn__text Отправить
