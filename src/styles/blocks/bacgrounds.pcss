@@ -1,60 +1,61 @@
 .section {
+  position: relative;
+  margin: 0 auto;
+  width: 100vw;
+  min-height: 100vh;
+  min-width: 100vw;
+  background-size: cover;
+  background-position: center;
+  background-origin: border-box;
+
+  &__hero {
+    background-color: #1b1f22;
     position: relative;
-    margin: 0 auto;
-    width: 100vw;
-    min-height: 100vh;
-    min-width: 100vw;
-    background-size: cover;
-    background-position: center;
-    background-origin: border-box;
-    
-
-    &__hero {
-        background-color: #1b1f22;
-        position: relative;
-        height: 100vh;
-        min-height: 1300px;
-
-        @include tablets {
-            height: 1050px;
-            min-height: 1050px;
-        }        
+    height: 100vh;
+    min-height: 1300px;
+    @include tablets {
+      height: 1050px;
+      min-height: 1050px;
     }
-
-    &__my-card {
-        background-image: url('../images/content/myCard_bg.jpg');
-        display: flex;
-        align-items: center;
-        min-height: 800px;
+    @include phones {
+      height: 820px;
+      min-height: 820px;
     }
+  }
 
-    &__skills {
-        background-image: url('../images/content/skills_bg.jpg');
-        display: flex;
-        position: relative;
-        height: 100vh;
-        min-height: 1027px;
-        position: relative;
-    }
+  &__my-card {
+    background-image: url('../images/content/myCard_bg.jpg');
+    display: flex;
+    align-items: center;
+    min-height: 800px;
+  }
 
-    &__my-works {
-        background: #ffff;
-        height: 100vh;
-    }
+  &__skills {
+    background-image: url('../images/content/skills_bg.jpg');
+    display: flex;
+    position: relative;
+    height: 100vh;
+    min-height: 1027px;
+    position: relative;
+  }
+
+  &__my-works {
+    background: #ffff;
+    height: 100vh;
+  }
 }
 
 .container__autumn-background {
-    position: relative;
-    margin: 0 auto;
-    width: 100vw;
-    min-height: 100vh;
-    background-image: url('../images/content/autumn_bg2.png'), 
-    url('../images/content/autumn_bg.jpg');
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
+  position: relative;
+  margin: 0 auto;
+  width: 100vw;
+  min-height: 100vh;
+  background-image: url('../images/content/autumn_bg2.png'), url('../images/content/autumn_bg.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 .footer {
-    background-color: #1b1f22;
+  background-color: #1b1f22;
 }
