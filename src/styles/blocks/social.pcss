@@ -1,7 +1,7 @@
 .social__list {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .socials__link {
@@ -23,5 +23,11 @@
 
     &:hover {
         fill: #ffffff;
+    }
+}
+
+.header__social {
+   @include phones {
+        display: none;
     }
 }

@@ -13,7 +13,12 @@
         background-color: #1b1f22;
         position: relative;
         height: 100vh;
-        min-height: 1300px;        
+        min-height: 1300px;
+
+        @include tablets {
+            height: 1050px;
+            min-height: 1050px;
+        }        
     }
 
     &__my-card {
