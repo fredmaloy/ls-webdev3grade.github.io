@@ -21,14 +21,16 @@
 
   &:nth-child(1) {
     .parallax__bacground-image {
+      width: 100%;
       top: 0;
       left: 0;
+
       @include tablets {
         height: 55%;
       }
     }
   }
-
+  
   &:nth-child(2) {
     .hero__content {
       position: relative;
@@ -38,36 +40,49 @@
       transform: translate(-50%, -50%) !important;
       margin-top: -18.5rem;
       color: #ffffff;
+
       margin-left: 137px;
+      
       @include desktopHd {
         left: 50%;
         margin-left: 0;
       }
+
       @include tablets {
         margin-top: -13.5rem;
         left: 50%;
         margin-left: 0;
       }
+
       @include phones {
         margin-top: -7.5rem;
         z-index: 1;
       }
-    }
+    } 
   }
+ 
 
   &:nth-child(3) {
     .parallax__bacground-image {
+      width: 100%;
       top: 0;
       left: 0;
       margin-top: 23.5rem;
+
       @include tablets {
         margin-top: 24.5rem;
       }
+
       @include phones {
         margin-top: 20.5rem;
       }
     }
   }
+}
+
+.section__hero-header {
+    width: 100%;
+    padding-top: 20px;
 }
 
 .parallax__bacground-image {
@@ -139,7 +154,17 @@
 .hero__scroll {
   display: flex;
   justify-content: center;
+  .hero__scroll-button {
+    margin-bottom: 50px;
+  }
 }
+
+.hero__scroll {
+    display: flex;
+    justify-content: center;
+}
+
+
 
 .hero__scroll-icon {
   fill: #ffffff;
@@ -151,9 +176,11 @@
   font-weight: 800;
   font-size: 72px;
   line-height: 0.833;
+
   @include tablets {
     text-align: center;
   }
+
   @include phones {
     font-size: 36px;
   }
