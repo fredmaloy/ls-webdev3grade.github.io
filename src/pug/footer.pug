@@ -3,21 +3,18 @@ footer.footer
         .footer__content-column__one
             .year 
                 | &copy; 2019
-            .name
-                | Черепанов 
-                br
-                | Сергей
-            .description
-                | Личный сайт 
-                br
-                |  веб разработчика
+            .name__discription
+                .name
+                    | Черепанов Сергей
+                .description
+                    | Личный сайт веб разработчика
         .footer__content-column__two
             .navigation.footer__navigation
                 +navigation('navigation', ['Главная', 'Обо мне', 'Навыки', 'Работы', 'Отзывы', 'Связаться'], 0)
             .column__two-container
                 .column__two-left
                     .usefull
-                        p.useful__paragraph
+                        p.useful__paragraph.useful__paragraph-footer
                             | Этот сайт я сделал в рамках обучения в школе онлайн образования LoftSchool. 
                     .footer__socials
                         ul.social__list

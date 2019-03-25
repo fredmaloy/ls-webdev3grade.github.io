@@ -3,6 +3,18 @@
     justify-content: center;
     flex-direction: column;
     align-items: flex-start;
+
+    @include tablets {
+        align-items: center;
+    }
+
+    @include desktopHd {
+       align-items: center;
+    }
+
+    @include phones {
+        width: 100%;
+    }
 }
 
 .my-works__headline {   
@@ -10,18 +22,40 @@
     text-align: left;
     font-weight: bold;
     color: #475360;
-    padding: 100px 0;
+    padding-bottom: 100px;
+
+    @include tablets {
+        padding-bottom: 60px;
+        width: 39.375rem;
+    }
+
+    @include phones {
+        text-align: center;
+    }
+
+    @include desktopHd {
+        width: 100%;
+    }
 }
 
 .my-works__content {
     display: flex;
     justify-content: center;
     align-items: flex-start;
-    margin-bottom: 100px;
+
+    @include tablets {
+        flex-direction: column;
+        align-items: center;
+    }
 }
 
 .my-works__content-left {
-    margin-right: 150px;   
+    margin-right: 150px;
+
+    @include tablets {
+        margin-right: 0;
+        padding-bottom: 50px;
+    }   
 }
 
 .slider {
@@ -30,6 +64,14 @@
     overflow: hidden;
     position: relative; 
     z-index: 100;
+
+    @include desktopHd {
+        width: 975px;
+    }
+
+    @include phones {
+        width: 100%;
+    }
 }
 
 .slider__background-elem {
@@ -61,6 +103,13 @@
     justify-content: center;
     align-items: center;
 
+    @include desktopHd {
+        width: 710px;
+    }
+
+    @include phones {
+       display: none;
+    }
 }
 
 .slider__content-list {
@@ -76,13 +125,13 @@
 .slider__elem-image {
     width: 100%;
 
-    /* &:hover {
-         border: 5px  solid #ed7f00;
-    } */
+    &:hover {
+         border: 3px  solid #ed7f00;
+    }
 }
 
 .slider__content-elem__active {
-    border: 5px  solid #ed7f00;
+    border: 3px  solid #ed7f00;
 }
 
 .preview__slider-container {
@@ -101,6 +150,11 @@
     justify-content: space-around;
     align-items: center;
     z-index: 101;
+
+    @include phones {
+       top: 58%;
+        right: 0;
+    }
 }
 
 .slider__button-arrow {
@@ -142,11 +196,17 @@
     position: absolute;
     font-size: 300px;
     color: #ececec;
-    font-weight: bold;
+    font-weight: 800;
     top: -100px;
     right: -130px;
     height: 300px;
     margin: 0;
+
+    @include desktopHd {
+        font-size: 400px;
+        top: -5.25rem;
+        right: -10.125rem;
+    }
 }
 
 .slider__number-slide__digit {
@@ -159,6 +219,12 @@
     justify-content: center;
     align-items: flex-start;
     flex-direction: column;
+
+    @include tablets {
+       align-items: center;
+
+    }
+
    
 }
 
@@ -190,6 +256,10 @@
     justify-content: center;
     align-items: center;
     padding-bottom: 50px;
+
+     @include phones {
+         padding-bottom: 20px;
+    }
 }
 
 .loftschool__review-tchnology__elem {
@@ -204,6 +274,11 @@
     &:last-child {
         margin-right: 0;
     }
+
+    @include phones {
+        padding: 15px 15px;
+        font-size: 13px;
+    }
 }
 
 .headline__color-black {
@@ -212,9 +287,37 @@
     line-height: 1.6;
     font-size: 30px;
     padding-bottom: 50px;
+
+    @include tablets {
+       width: 100%;
+       text-align: center;
+       padding-bottom: 35px;
+    }
+
+    @include phones {
+        width: 90%;
+        text-align: left;
+        padding-bottom: 10px;
+        line-height: 1.2;
+    }
+
+}
+
+.my-works__content-right {
+    @include tablets {
+       width: 100%;
+       text-align: center;
+    }
 }
 
 .loftschool__review-paragraph {
     color: #9299a1;
     padding-bottom: 50px;
+
+     @include phones {
+        width: 90%;
+        text-align: left;
+        font-size: 14px;
+         padding-bottom: 20px;
+    }
 }

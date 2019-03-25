@@ -1,126 +1,163 @@
-
 .section__comments {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  @include tablets {
+    max-height: 530px;
+  }
 }
 
 .comments__container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  @include phones {
+    align-items: center;
+  }
+  @include phones {
+    width: 100%;
+    max-width: 100%;
+  }
 }
 
 .section__comments-headline {
-    display: flex;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding-bottom: 100px;
+  @include tablets {
+      
+  }
+  @include phones {
+    flex-direction: column;
+    align-items: center;
     justify-content: center;
-    align-items: flex-start;
+    padding-bottom: 20px;
+  }
+  @include desktopHd {
+  }
+}
+
+.comments__headline {
+  @include phones {
+    font-size: 24px;
+    padding-bottom: 20px;
+    text-align: center;
+  }
 }
 
 .slider__comments-buttons {
-    margin-left: 100px;
-    fill: #ffffff;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 150px;
-    height: 60px;
-
+  margin-left: 100px;
+  fill: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 150px;
+  height: 60px;
+  @include phones {
+    margin-left: 0;
+  }
 }
 
 .slider__comments-button__circle {
-    width: 100%;
-    height: 100%;
-    position: relative;
-    cursor: pointer;
-    margin-right: 30px;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  cursor: pointer;
+  margin-right: 30px;
 
-    &:last-child {
-        margin-right: 0;
-    }
+  &:last-child {
+    margin-right: 0;
+  }
 }
 
 .circle__comment {
-    fill: transparent;
-    stroke-width: 5px;
-    stroke: #ffffff;
+  fill: transparent;
+  stroke-width: 5px;
+  stroke: #ffffff;
 }
 
 .slider__comments-circle__svg {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .comments__content {
-    margin-top: 100px;
+  overflow: hidden;
+  width: 100%;
 }
 
 .comments__content-list {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  @include tablets {
+    width: 100%;
+  }
+  @include phones {
+    width: 100%;
+    justify-content: flex-start;
+  }
 }
 
 .comments__content-elem {
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    margin-right: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  margin-right: 80px;
 
-    &:last-child {
-        margin-right: 0;
-    }
+  &:last-child {
+    margin-right: 0;
+  }
+  @include tablets {
+    flex: 1;
+    margin-right: 55px;
+  }
+  @include phones {
+    width: 100%;
+    margin-right: 0;
+  }
 }
 
 .quote {
-    width: 60px;
-    fill: #2c2d2c;
-    fill-opacity: 0.7;
+  width: 60px;
+  fill: #2c2d2c;
+  fill-opacity: 0.7;
 }
 
 .comments__content-elem__feedback {
-    padding-left: 20px;
+  padding-left: 20px;
 }
 
 .comments__content-elem__feedback-user-card {
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
 }
 
 .feedback-user-card-image {
-    width: 80px;
-    height: 80px;
+  width: 80px;
+  height: 80px;
 }
 
 .comments__content-elem__feedback-text {
-    height: 150px;
+  height: 150px;
 }
 
 .feedback-user-card-info {
-    margin-left: 30px;
+  margin-left: 30px;
 }
 
 .feedback-user-card-name {
-    margin-bottom: 25px;
-    font-size: 18px;
-    font-weight: bold;
-    color: #ffffff;
+  padding-bottom: 25px;
+  font-size: 18px;
+  font-weight: bold;
+  color: #ffffff;
+  @include tablets {
+    padding-bottom: 10px;
+  }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-

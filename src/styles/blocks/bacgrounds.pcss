@@ -2,7 +2,7 @@
   position: relative;
   margin: 0 auto;
   width: 100vw;
-  min-height: 100vh;
+  min-height: 700px;
   min-width: 100vw;
   background-size: cover;
   background-position: center;
@@ -38,11 +38,23 @@
         height: 100vh;
         min-height: 1027px;
         position: relative;
+
+        @include tablets {
+           min-height: 1100px;
+        }
+        @include phones {
+          min-height: 1300px;
+        }
     }
 
     &__my-works {
         background: #ffff;
         height: 100vh;
+        display: flex;
+
+        @include phones {
+          min-height: 850px;
+        }
     }
 
     &__autumn-background {
@@ -55,6 +67,8 @@
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
+
+
     }
 
 }

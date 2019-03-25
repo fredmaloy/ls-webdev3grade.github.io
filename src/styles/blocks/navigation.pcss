@@ -6,6 +6,11 @@
 
 .footer__navigation {
     display: flex;
+
+    @include tablets {
+      align-items: flex-start;
+      justify-content: flex-start;
+    }
 }
 
 .navigation__list {
@@ -13,10 +18,14 @@
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
+
+     @include tablets {
+      justify-content: flex-start;
+    }
 }
 
 .navigation__list-elem {
-    margin-right: 50px;
+    padding-right: 50px;
     
     &:hover {
         color: #9299a1;
@@ -24,5 +33,9 @@
 
     &:last-child {
         margin-right: 0;
+    }
+
+    @include tablets {
+      padding-bottom: 10px
     }
 }
