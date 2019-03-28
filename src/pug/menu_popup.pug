@@ -1,0 +1,16 @@
+.popup#hamburger
+    a.hamburger__menu-link(@click="popupActive")
+        .hamburger__menu        
+    .menu__popup(v-if="show")
+        .menu__popup-container
+            .menu__popup-navigation
+                +navigation('navigation-popup', ['Главная', 'Обо мне', 'Навыки', 'Работы', 'Отзывы', 'Связаться'], 1)
+            .menu__popup-socials
+                ul.social__list
+                    - var socials = ['insta', 'vk', 'github'];
+                    each item in socials
+                        li.socials__item
+                            a(href="#").socials__link
+                                +icon(`${item}`, 'socials__icon')
+        a.menu__popup-close(href='#', @click="popupActive")
+            +icon(`cross`, 'menu__popup-close__svg')

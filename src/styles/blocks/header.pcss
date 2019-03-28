@@ -10,42 +10,6 @@
     font-size: 36px;
 }
 
-.hamburger__menu-link {
-    vertical-align: middle;
-    position: relative;
-    height: 22px;
-    align-items: center;
-    margin-left: 90px;
-    display: none;
-	
-    @include tablets {
-        display: flex;
-    }
-}
-
-.hamburger__menu {
-    &,
-    &:before,
-    &:after {
-        background: #ffffff;
-        width: 28px;
-        height: 5px;
-        border-radius: 3px;
-    }
-    &:before,
-    &:after {
-        content: "";
-        display: block;
-        position: absolute;
-    }
-    &:before {
-        top: -3px;
-    }
-    &:after {
-        bottom: -3px;
-    }
-}
-
 .header__end {
     display: flex;
     justify-content: center;

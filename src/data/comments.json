@@ -1,0 +1,44 @@
+[
+    {
+        "id": 0,
+        "text": "Этот код выдержит любые испытания. Только пожалуйста, не загружайте сайт на слишком старых браузерах",
+        "author-name": "Владимир Сабанцев",
+        "author-occ": "Преподаватель",
+        "author-pic": "my_photo.png"
+    },
+    {
+        "id": 1,
+        "text": "Этот парень проходил обучение веб-разработке не где-то, а в LoftSchool! 4,5 месяца только самых тяжелых испытаний и бессонных ночей!",
+        "author-name": "Ковальчук Дмитрий",
+        "author-occ": "Основатель Loftschool",
+        "author-pic": "my_photo.png"
+    },
+    {
+        "id": 2,
+        "text": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur, maiores asperiores. Et dolor hic error id assumenda quos dolore. Enim ipsum non, libero quibusdam doloremque nesciunt explicabo nobis",
+        "author-name": "Петя Смирнов",
+        "author-occ": "Властелин участка",
+        "author-pic": "my_photo.png"
+    },
+    {
+        "id": 3,
+        "text": "Далеко-далеко за словесными горами в стране гласных и согласных, живут рыбные тексты. Своего себя родного, курсивных домах путь страну за! Коварных, вскоре. Вскоре использовало снова жаренные которое lorem себя букв по всей строчка.",
+        "author-name": "Вася Васечкин",
+        "author-occ": "Студент",
+        "author-pic": "my_photo.png"
+    },
+    {
+        "id": 4,
+        "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit quaerat nisi repellat, corporis quidem, cumque natus facere quo dolor culpa est perspiciatis aliquam! Voluptas repellendus corrupti ea dolorum. Consequatur, repellat illum, recusandae rem ex reprehenderit blanditiis nam quaerat, voluptatum quasi tempora. Ratione expedita autem eligendi nisi iusto deleniti obcaecati quam!",
+        "author-name": "Иван Иванов",
+        "author-occ": "Преподаватель Loftschool",
+        "author-pic": "my_photo.png"
+    },
+    {
+        "id": 5,
+        "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit quaerat nisi repellat, corporis quidem, cumque natus facere quo dolor culpa est perspiciatis aliquam! Voluptas repellendus corrupti ea dolorum. Consequatur, repellat illum, recusandae rem ex reprehenderit blanditiis nam quaerat, voluptatum quasi tempora. Ratione expedita autem eligendi nisi iusto deleniti obcaecati quam!",
+        "author-name": "Иван Иванов",
+        "author-occ": "Преподаватель Loftschool",
+        "author-pic": "my_photo.png"
+    }
+]

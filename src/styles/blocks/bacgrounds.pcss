@@ -12,7 +12,10 @@
     background-color: #1b1f22;
     position: relative;
     height: 100vh;
-    min-height: 1300px;
+    /* min-height: 1300px; */
+    @include desktopHd {
+      height: 100%;
+    }
     @include tablets {
       height: 1050px;
       min-height: 1050px;

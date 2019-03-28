@@ -6,7 +6,7 @@
 
 .socials__link {
   width: 25px;
-  height: 31px;
+  height: 25px;
   display: block;
 }
 
@@ -20,13 +20,21 @@
 
 .socials__icon {
     fill: #9299a1 ;
+    width: 25px;
+    height: 25px;
 
     &:hover {
-        fill: #ffffff;
+        fill: #ff9a00;
     }
 }
 
 .header__social {
+    
+
+     @include tablets {
+        padding-right: 60px;
+      }
+
    @include phones {
         display: none;
     }
