@@ -1,4 +1,4 @@
-section.section.section__hero
+section.section.section__hero(data-link="section__hero")
   .parallax
     .parallax__layer(data-speed="0.1")
       +image('content/hero_parallax_layer1.png', 'parallax__bacground-image')
@@ -28,7 +28,7 @@ section.section.section__hero
           a.header__logo-link(href='#')
             h2.headline_second-level.header__logo-init ЧС
           .navigation.header__navigation
-            +navigation('navigation', ['Главная', 'Обо мне', 'Навыки', 'Работы', 'Отзывы', 'Связаться'], 1)
+            +navigation('navigation', ["Главная" , "Обо мне" , "Навыки", "Работы" , "Отзывы" , "Связаться"], 0)
           .header__end
             .social.header__social
               ul.social__list
@@ -41,4 +41,5 @@ section.section.section__hero
         a(href="#").hero__scroll Скролл
           .hero__scroll-icon
             +icon(`scroll`, 'hero__scroll-icon__svg')
+include ./menu_popup.pug
 
