@@ -1,0 +1,161 @@
+.content__work-space {
+    height: 100%;
+}
+
+.content__work-space__about-me__list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    /* grid-template-rows: 1fr 1fr; */
+    justify-content: center;
+    align-items: center;
+}
+
+.content__work-space__about-me__elem {
+    margin-right: 30px;
+    margin-bottom: 30px;
+}
+
+.group-skills {
+    height: 400px;
+    width: 530px;
+    background-color: #1b1f22;
+    padding: 20px;
+    box-shadow: 3px 3px 5px #0f1112;
+    
+}
+
+.group-skills__form {
+    height: 100%;
+    display: grid;
+    grid-template-rows: 75px 1fr 75px;
+    align-content: space-between;
+}
+
+.input {
+    border: none;
+    background-color: transparent;
+    resize: none;
+    outline:none;
+    color: #ffffff;
+    font-size: 18px;
+    font-weight: bold;
+    line-height: 1.5;
+    border-bottom: 1px solid #ffffff;
+    height: 50px;
+}
+
+.title-group__input {
+    width: 275px;
+   
+}
+
+.title__skill {
+    width: 220px;
+     margin-right: 10px;
+}
+
+.percent__skill {
+    width: 75px;
+}
+
+.group-skills__form-headline {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #3d4043;
+}
+
+.group-skills__form-add__skill {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.group__btn {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.group-skills__form-content__list {
+    
+}
+
+.group-skills__form-content__elem {
+   display: grid;
+    grid-template-columns: 4fr 1fr 1fr;
+    justify-content: space-between; 
+    align-content: center;
+    height: 50px;
+}
+
+.form-content__editing-btn {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.form-content__percent-skill {
+    display: flex;
+    justify-content: center;
+}
+
+.group__btn-ok {
+    content: "";
+    width: 15px;
+    height: 15px;
+    background:  svg-load('tick.svg', fill=#32df3a, width=100%, height=100%);
+    margin-right: 20px;
+}
+
+.group__btn_cancel {
+     content: "";
+    width: 15px;
+    height: 15px;
+    background:  svg-load('cross.svg', fill=#bf2929, width=100%, height=100%);
+}
+
+.edit {
+    content: "";
+    width: 15px;
+    height: 15px;
+    background:  svg-load('pencil.svg', fill=#ffffff, width=100%, height=100%);
+    margin-right: 20px;
+}
+
+.delete {
+    content: "";
+    width: 15px;
+    height: 15px;
+    background:  svg-load('trash.svg', fill=#bf2929, width=100%, height=100%);
+}
+
+.add__skill__btn {
+    position: relative;
+  content: '';
+  width: 40px;
+  height: 40px;
+  margin-left: 20px;
+  border-radius: 50%;
+  background: linear-gradient(#e3bb5a, #ff9d00);
+
+  &:after {
+    position: absolute;
+    content: '';
+    top: 31.5%;
+    left: 31.6%;
+    width: 15px;
+    height: 15px;
+    transform: rotate(-45deg) /* translate(-50%, -50%) */;
+    background:  svg-load('cross.svg', fill=#24241f, width=100%, height=100%);
+  }
+}
+
+.form-content__title-skill__edit {
+    width: 275px;
+    height: 30px;
+}
+
+.form-content__percent-skill__edit {
+    width: 75px;
+    height: 30px;
+}
