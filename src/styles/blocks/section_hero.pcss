@@ -44,6 +44,11 @@
         height: 40%;
         top: 20%;
       }
+
+      @include phones {
+        top: 20%;
+       height: 35%;
+      }
     }
   }
 
@@ -83,6 +88,7 @@
         height: 35%;
       }
       @include phones {
+        height: 30%;
       }
     }
   }
@@ -97,6 +103,8 @@
         top: 64%;
       }
       @include phones {
+        top: 60%;
+        height: 26%;
       }
     }
   }
@@ -105,13 +113,13 @@
     .parallax__bacground-image {
       position: absolute;
       width: 100%;
-      bottom: 0;
+     top: 72%;
       left: 0;
       @include tablets {
-        margin-top: 24.5rem;
+        top: 70%;
       }
       @include phones {
-        margin-top: 20.5rem;
+        
       }
     }
   }
@@ -120,13 +128,13 @@
     .parallax__bacground-image {
       position: absolute;
       width: 100%;
-      bottom: 0;
+      top: 72%;
       left: 0;
       @include tablets {
-        margin-top: 24.5rem;
+        
       }
       @include phones {
-        margin-top: 20.5rem;
+        
       }
     }
   }
@@ -198,6 +206,13 @@
 
 .hero__scroll-button {
   margin-bottom: 50px;
+  fill: #ffffff;
+
+  &:hover {
+   color: #ff9a00;
+   fill: #ff9a00;
+  }
+
   @include phones {
     display: none;
   }
@@ -218,9 +233,14 @@
 }
 
 .hero__scroll-icon {
-  fill: #ffffff;
+ 
   width: 25px;
   height: 31px;
+  fill: inherit;
+
+  &:hover {
+   color: #ff9a00;
+  }
 }
 
 .hero__content-headline {

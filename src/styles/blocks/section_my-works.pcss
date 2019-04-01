@@ -12,7 +12,7 @@
        align-items: center;
     }
 
-    @include phones {
+    @include phones551 {
         width: 100%;
     }
 }
@@ -29,7 +29,8 @@
         width: 39.375rem;
     }
 
-    @include phones {
+    @include phones551 {
+        padding-top: 60px;
         text-align: center;
     }
 
@@ -69,7 +70,7 @@
         width: 975px;
     }
 
-    @include phones {
+    @include phones551 {
         width: 100%;
     }
 }
@@ -107,7 +108,7 @@
         width: 710px;
     }
 
-    @include phones {
+    @include phones551 {
        display: none;
     }
 }
@@ -151,7 +152,7 @@
     align-items: center;
     z-index: 101;
 
-    @include phones {
+    @include phones551 {
        top: 58%;
         right: 0;
     }
@@ -238,6 +239,10 @@
     height: 30px;
     padding-bottom: 5px;
     cursor: pointer;
+
+    @include phones551 {
+         padding-bottom: 60px;
+    }
     
     &:hover {
         border-bottom: 2px solid #4b6fd7;
@@ -262,7 +267,7 @@
     align-items: center;
     padding-bottom: 50px;
 
-     @include phones {
+     @include phones551 {
          padding-bottom: 20px;
     }
 }
@@ -280,7 +285,7 @@
         margin-right: 0;
     }
 
-    @include phones {
+    @include phones551 {
         padding: 15px 15px;
         font-size: 13px;
     }
@@ -299,7 +304,7 @@
        padding-bottom: 35px;
     }
 
-    @include phones {
+    @include phones551 {
         width: 90%;
         text-align: left;
         padding-bottom: 10px;
@@ -319,7 +324,7 @@
     color: #9299a1;
     padding-bottom: 50px;
 
-     @include phones {
+     @include phones551 {
         width: 90%;
         text-align: left;
         font-size: 14px;
