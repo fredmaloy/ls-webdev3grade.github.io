@@ -1,58 +1,6 @@
 section.section.section__my-works(data-link="section__my-works")
     .container.my-works__container
         h2.headline_second-level.my-works__headline Мои работы
-        .my-works__content
-            .my-works__content-left
-                .preview__slider-container  
-                    .slider
-                        .slider__background
-                            ul.slider__background-list
-                                li.slider__background-elem.slider__background-elem__active
-                                    +image('content/slider_bg1.jpg', 'slider__background-image')
-                                li.slider__background-elem
-                                    +image('content/slider_bg2.jpg', 'slider__background-image')
-                                li.slider__background-elem
-                                    +image('content/slider_bg3.jpg', 'slider__background-image')
-                                li.slider__background-elem
-                                    +image('content/slider_bg4.jpg', 'slider__background-image')
-                            .slider__content
-                                ul.slider__content-list
-                                    li.slider__content-elem.slider__content-elem__active
-                                        +image('content/slider_bg1.jpg', 'slider__elem-image')
-                                    li.slider__content-elem
-                                        +image('content/slider_bg2.jpg', 'slider__elem-image')
-                                    li.slider__content-elem
-                                        +image('content/slider_bg3.jpg', 'slider__elem-image')
-                                    li.slider__content-elem
-                                        +image('content/slider_bg4.jpg', 'slider__elem-image')    
-                    .slider__button
-                        .slider__button-arrow.right
-                            +icon(`arrow-down`, '.slider__button-arrow__right-svg')
-                        .slider__button-arrow.left
-                            +icon(`arrow-down`, '.slider__button-arrow__left-svg')
-                    .slider__number-slide
-                        p.slider__number-slide__digit 2                                                                   
-            .my-works__content-right
-                .loftschool__review
-                    .loftschool__review-tchnology
-                        ul.loftschool__review-tchnology__list
-                            li.loftschool__review-tchnology__elem HTML
-                            li.loftschool__review-tchnology__elem CSS
-                            li.loftschool__review-tchnology__elem javascript
-                    h3.headline__color-black 
-                        | Сайт школы образования        
-                    p.loftschool__review-paragraph
-                        |  Этот парень проходил обучение веб-разработке
-                        br
-                        | не где-то, а в LoftSchool! 2 месяца только самых
-                        br
-                        | тяжелых испытаний и бессонных ночей!
-                    .loftschool__review-site
-                        a.loftschool__review-site__link(href="https://loftschool.com")
-                            .loftschool__review-site__link-icon
-                                +icon(`link`, 'loftschool__review-site__link-svg')
-                            .loftschool__review-site__link-text  
-                            |   Посмотреть сайт
-
-
-
+        #slider-component
+        
+                         

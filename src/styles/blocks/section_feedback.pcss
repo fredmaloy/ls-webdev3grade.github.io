@@ -97,9 +97,18 @@
     height: 50px;
     padding-left: 50px;
 
+    &:focus {
+        fill: #ee8400;
+        border-bottom: 1px solid #ee8400;
+    }
+
     &.name-input {
         background: svg-load('user.svg', fill=#9299a1, width=100%, height=100%) top left no-repeat;
-        background-size: 40px 40px;   
+        background-size: 40px 40px;
+
+        &:focus {
+            fill: #ee8400;
+        }   
     }
 
     &.email-input {
