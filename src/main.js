@@ -10,5 +10,5 @@ import "./scripts/slider_my-works";
 import "./scripts/parallax";
 import "./scripts/skills";
 import "./scripts/menu_popup";
-import "./scripts/navigation_links";
+/* import "./scripts/navigation_links"; */
 

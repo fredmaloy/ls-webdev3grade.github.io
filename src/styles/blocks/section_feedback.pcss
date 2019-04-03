@@ -107,19 +107,30 @@
         background-size: 40px 40px;
 
         &:focus {
-            fill: #ee8400;
+            background: svg-load('user.svg', fill=#ee8400, width=100%, height=100%) top left no-repeat;
+            background-size: 40px 40px;
         }   
     }
 
     &.email-input {
         background: svg-load('envelope.svg', fill=#9299a1, width=100%, height=100%) top left no-repeat;
         background-size: 40px 40px;
+
+        &:focus {
+            background: svg-load('envelope.svg', fill=#ee8400, width=100%, height=100%) top left no-repeat;
+            background-size: 40px 40px;
+        }
     }
 
     &.comment-textarea {
         background: svg-load('message.svg', fill=#9299a1, width=100%, height=100%) top left no-repeat;
         background-size: 40px 40px;
         height: 80px;
+
+        &:focus {
+            background: svg-load('message.svg', fill=#ee8400, width=100%, height=100%) top left no-repeat;
+        background-size: 40px 40px;
+        }
     }
 }
 

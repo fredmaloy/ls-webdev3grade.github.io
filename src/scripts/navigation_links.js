@@ -1,6 +1,6 @@
 /* import Vue from 'vue'; */
 
-const linksValue = document.getElementById('#navigation');
+/* const linksValue = document.getElementById('#navigation');
 const dataSection = document.querySelectorAll('.section');
 
 for(var linkValue in linksValue) {
@@ -15,9 +15,9 @@ linkValue.addEventListener('click', (e) => {
      if (linkHref === dataSection.dataset.Link) {
         window.scroll(dataSection.dataset.Link);
      };
-});
+}); */
 
-/* new Vue({
+new Vue({
     
     el: "#navigation",
 
@@ -38,7 +38,7 @@ linkValue.addEventListener('click', (e) => {
 
     }
 
-}); */
+});
 
 
 

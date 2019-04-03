@@ -1,18 +1,13 @@
 .parallax {
   position: relative;
   overflow: hidden;
-  height: 100%;
+  min-height: 768px;
   width: 100%;
+  
   @include desktopHd {
     min-height: 1305px;
   }
 
-  /* @include tablets {
-    height: 1050px;
-  }
-  @include phones {
-    height: 820px;
-  } */
 }
 
 .parallax__layer {

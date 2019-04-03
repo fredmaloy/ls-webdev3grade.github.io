@@ -3,9 +3,13 @@
         .hamburger__menu        
     .menu__popup(v-if="show")
         .menu__popup-container
-            .menu__popup-navigation
-                +navigation('navigation-popup', ['Главная', 'Обо мне', 'Навыки', 'Работы', 'Отзывы', 'Связаться'], 1)
-            .menu__popup-socials
+            .menu__popup-navigation(@click="popupActive")
+                +navigation('navigation-popup', [{"title": "Главная" , "section": "#section__hero"},
+                                        {"title": "Обо мне" , "section": "#section__my-card"},
+                                        {"title": "Навыки" , "section": "#section__skills"},
+                                        {"title": "Работы" , "section": "#section__my-works"},
+                                        {"title": "Отзывы" , "section": "#section__comments"},
+                                        {"title": "Связаться" , "section": "#section__feedback"}], 0)            .menu__popup-socials
                 ul.social__list
                     - var socials = ['insta', 'vk', 'github'];
                     each item in socials

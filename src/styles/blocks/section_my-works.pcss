@@ -72,8 +72,6 @@
     z-index: -1;
     @include desktopHd {
       font-size: 400px;
-      top: -5.25rem;
-      right: -10.125rem;
     }
   }
   @include desktopHd {
@@ -105,11 +103,12 @@
   height: 7rem;
   max-width: 100%;
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
   overflow: hidden;
+
   @include desktopHd {
-    width: 710px;
+    width: 55.375rem;
   }
   @include phones551 {
     display: none;
@@ -120,6 +119,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  position: absolute;
+  left: 0%;
 }
 
 .slider__content-elem {

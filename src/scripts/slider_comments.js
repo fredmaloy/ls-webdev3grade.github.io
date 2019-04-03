@@ -1,7 +1,5 @@
 import Vue from 'vue';
-import Flickity from 'vue-flickity';   
-    
-console.log('!!!');
+import Flickity from 'vue-flickity';
 
 new Vue({
     el: "#commentsId-component",
@@ -15,7 +13,7 @@ new Vue({
             comments: [],
             flickityOptions: {
                 initialIndex: 1,
-                groupCells: 2,
+                groupCells: true,
                 prevNextButtons: false,
                 pageDots: false,
                 wrapAround: true
@@ -38,7 +36,7 @@ new Vue({
 
         previous() {
             this.$refs.flickity.previous();
-        }
+        },
     },
 
     created() {
