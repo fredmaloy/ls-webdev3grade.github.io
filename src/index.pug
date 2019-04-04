@@ -1,15 +1,26 @@
 include ./mixins.pug
 
 <!DOCTYPE html>
-html(lang="en")
+html(lang='rus')
   head
-    meta(charset="UTF-8")
-    meta(name="viewport", content="width=device-width, initial-scale=1.0")
-    meta(http-equiv="X-UA-Compatible", content="ie=edge")
-    title Portfolio | main page
+    meta(charset='UTF-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1.0')
+    meta(http-equiv='X-UA-Compatible', content='ie=edge')
+    script(src="./main.js")
+    title Port
   body
-    .wrapper
-      .maincontent
-        +image('content/user.jpg', 'user-pic')
-        +icon('link', 'link-class')
-        .icon-bg
+    .wrapper      
+      include ./pug/section_hero
+      include ./pug/section_myCard
+      include ./pug/section_skills
+      include ./pug/section_my-works
+      .section__autumn-background
+        include ./pug/section_comments
+        include ./pug/section_feedback
+      include ./pug/footer
+    include ./templates/entry.pug 
+    include ./pug/menu_popup.pug 
+    
+
+        
+        

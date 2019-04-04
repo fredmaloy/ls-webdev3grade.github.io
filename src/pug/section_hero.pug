@@ -1,0 +1,44 @@
+section.section.section__hero
+  .parallax
+    .parallax__layer(data-speed="0.1")
+      +image('content/hero_parallax_layer1.png', 'parallax__bacground-image')
+    .parallax__layer(data-speed="0.18")
+      +image('content/hero_parallax_layer2.png', 'parallax__bacground-image')
+    .parallax__layer(data-speed="0.2")
+      .hero__content
+        .description.hero__content-table
+          | Личный сайт 
+          br
+          |  веб разработчика
+        h1.headline__first-level.hero__content-headline
+          | Сергей
+          br 
+          | Черепанов          
+    .parallax__layer(data-speed="0.4")
+      +image('content/hero_parallax_layer3.png', 'parallax__bacground-image')
+    .parallax__layer(data-speed="0.9")
+      +image('content/hero_parallax_layer4.png', 'parallax__bacground-image')
+    .parallax__layer(data-speed="0")
+      +image('content/hero_parallax_layer5.png', 'parallax__bacground-image')
+    .parallax__layer(data-speed="0")
+      +image('content/hero_parallax_layer6.png', 'parallax__bacground-image')
+    .container.hero__container
+      .section__hero-header
+        header.header
+          a.header__logo-link(href='#')
+            h2.headline_second-level.header__logo-init ЧС
+          .navigation.header__navigation
+            +navigation('navigation', ['Главная', 'Обо мне', 'Навыки', 'Работы', 'Отзывы', 'Связаться'], 1)
+          .header__end
+            .social.header__social
+              ul.social__list
+                - var socials = ['insta', 'vk', 'github'];
+                each item in socials
+                  li.socials__item
+                    a(href="#").socials__link
+                      +icon(`${item}`, 'socials__icon')
+      .hero__scroll-button
+        a(href="#").hero__scroll Скролл
+          .hero__scroll-icon
+            +icon(`scroll`, 'hero__scroll-icon__svg')
+

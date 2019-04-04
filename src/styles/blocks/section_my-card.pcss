@@ -1,0 +1,105 @@
+.my-card__container {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+   
+    @include phones {
+        flex-direction: column;
+      }
+}
+
+.my-card__right {
+    margin-left: 150px;
+
+    @include phones {
+        margin-left: 0;
+      }
+}
+
+.my-card__left {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    @include phones {
+        margin-bottom: 50px;
+      }
+}
+
+.my-card__profile {
+    margin-top: 80px;
+}
+
+.my-card__profile__list {
+    display: table;
+
+}
+
+.my-card__profile-elem {
+    height: 46px;
+    display: table-row;
+    margin-bottom: 46px;
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+}
+
+.profile-elem__head-column {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.profile-elem__content-column {
+    display: table-cell;
+    vertical-align: middle;
+    padding-left: 80px;
+    color: #ffffff;
+    font-weight: 600;
+}
+
+.first-paragraph {
+    font-weight: 700;
+    margin-bottom: 100px;
+
+    & span {
+        font-size: 36px;
+        font-weight: 700;
+        color: #ffffff;
+        line-height: 2.5;
+        margin: 20px 0;
+
+        @include phones {
+        line-height: 1.5;
+      }
+    }
+
+    @include phones {
+        margin-bottom: 55px;
+      }
+}
+
+
+
+.my-card__my-education {
+    
+    line-height: 1.875;
+
+    @include phones {
+       margin-bottom: 55px;
+      }
+}
+
+.second-paragraph {
+     font-style: italic;
+}
+
+.user-pic {
+    height: 200px;
+    border-radius: 50%;
+}
+
+
+

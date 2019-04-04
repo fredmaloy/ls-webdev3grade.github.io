@@ -1,0 +1,180 @@
+.skills__container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+     @include tablets {
+      justify-content: flex-start;
+      padding-top: 100px
+    }
+    @include phones {
+      
+    }
+}
+
+.headline-third-level {
+    font-size: 30px;
+    font-weight: 700;
+    line-height: 2.5;
+    color: #ffffff;
+
+    @include tablets {
+        text-align: center;
+        width: 22.25rem;
+        line-height: 1.5;
+    }
+
+     @include phones {
+      text-align: left;
+      width: 100%;
+    }
+}
+
+.useful {
+    @include tablets {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+      align-items: center;
+    }
+}
+
+.useful__paragraph {
+    line-height: 1.875;
+
+     @include tablets {
+       text-align: center;
+    }
+
+    @include phones {
+      text-align: left;
+    }
+}
+
+.skills__level {
+    margin-top: 100px;
+    width: 95%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: flex-end;
+    z-index: 1000;
+
+    @include tablets {
+      align-items: center;
+    }
+}
+
+.skills__level-diagrams {
+    @include tablets {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+.skills__level-diagrams__list {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+
+    @include phones {
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+}
+
+.headline-fourth-level {
+    font-size: 24px;
+    font-weight: bold;
+    line-height: 2;
+    color: #ffffff;
+}
+
+.skills__level-diagrams__svg {
+    width: 150px;
+}
+
+.skills__level-diagrams__elem {
+    margin-right: 30px;
+
+    &:last-child {
+        margin-right: 0;
+    }
+
+     @include phones {
+        &:nth-child(2) {
+            margin-right: 0;
+        }
+    }
+}
+
+.skills__level-diagrams__skill {
+    position: relative;
+    width: 9.375rem;
+    height: 9.375rem;
+
+    @include tablets {
+      width: 120px;
+      height: 120px;
+    }
+    @include phones {
+      
+    }
+}
+
+.skills__level-diagrams__tool {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #989594;
+    font-size: 18px;
+    font-weight: bold;
+
+    @include tablets {
+      font-size: 14px;
+    }
+    @include phones {
+      
+    }
+}
+
+
+.skills__level-diagrams__svg {
+    transform: rotate(-180deg);
+
+    @include tablets {
+      width: 120px;
+    }
+    @include phones {
+      
+    }
+}
+
+.circle {
+    fill: transparent;
+    stroke-width: 3px;
+    stroke: #423e3d;
+}
+
+.circle__above {
+    stroke-width: 6px;
+    stroke: #ed7f00;
+    stroke-dasharray: 268px;
+    stroke-dashoffset: 0;
+   /*  animation: fill 100s linear infinite; */
+    /* animation-play-state: paused; */ 
+}
+
+/* @keyframes fill {
+    from {
+        stroke-dashoffset: 15.68rem;
+    }
+
+    to {
+        stroke-dashoffset: 0;
+    }
+} */

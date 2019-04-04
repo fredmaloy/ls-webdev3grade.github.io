@@ -1,0 +1,47 @@
+.header__navigation {
+    @include tablets {
+        display: none;
+    }
+}
+
+.footer__navigation {
+    display: flex;
+
+    @include tablets {
+      align-items: flex-start;
+      justify-content: flex-start;
+    }
+}
+
+.navigation__list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+
+     @include tablets {
+      justify-content: flex-start;
+    }
+}
+
+.navigation__list-elem {
+    margin-right: 50px;
+    padding-bottom: 10px;
+    
+    &:hover {
+        color: #9299a1;
+    }
+
+    &__active {
+        color: #ff9a00;
+        border-bottom: 1px solid  #ff9a00;
+    }
+
+    &:last-child {
+        margin-right: 0;
+    }
+
+    @include tablets {
+      padding-bottom: 10px
+    }
+}

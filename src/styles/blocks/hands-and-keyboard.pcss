@@ -1,0 +1,26 @@
+.skills__hands-and-keyboard {
+    position: absolute;
+    content: '';
+    left: 0;
+    bottom: -11.5rem;
+    height: 707px;
+    width: 395px;
+    z-index: 20;
+
+    @include tablets {
+      left: 50%;
+      bottom: 0;
+    transform: rotate(-90deg) translateY(-45%);
+    height: 465px;
+    width: 465px;
+    }
+    @include phones {
+     transform: rotate(-90deg) translateY(-50%);
+    }
+
+    @include desktopHd {
+       height: 970px;
+       width: 650px;
+       bottom: -5.5rem;
+    }
+}

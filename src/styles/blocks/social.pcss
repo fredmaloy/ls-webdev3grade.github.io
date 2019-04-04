@@ -1,0 +1,41 @@
+.social__list {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.socials__link {
+  width: 25px;
+  height: 25px;
+  display: block;
+}
+
+.socials__item {
+  margin-right: 40px;
+
+  &:last-child {
+    margin-right: 0;
+  }
+}
+
+.socials__icon {
+    fill: #9299a1 ;
+    width: 25px;
+    height: 25px;
+
+    &:hover {
+        fill: #ff9a00;
+    }
+}
+
+.header__social {
+    
+
+     @include tablets {
+        padding-right: 60px;
+      }
+
+   @include phones {
+        display: none;
+    }
+}
