@@ -23,9 +23,9 @@ section.section.section__about-me
       .container.content__continer
         ul.content_list
           li.content__elem
-            include ./pug_admin/section_about-me.pug   
+            //include ./pug_admin/section_about-me.pug   
           li.content__elem
-            //include ./pug_admin/section_my-works.pug   
+            include ./pug_admin/section_my-works.pug   
           li.content__elem
             //include ./pug_admin/section_reviews.pug               
 </template>

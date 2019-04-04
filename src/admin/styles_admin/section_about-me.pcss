@@ -1,18 +1,21 @@
 .content__work-space {
     height: 100%;
+    margin: 0 auto;
 }
 
 .content__work-space__about-me__list {
     display: grid;
+    width:  1200px;
     grid-template-columns: 1fr 1fr;
-    /* grid-template-rows: 1fr 1fr; */
     justify-content: center;
     align-items: center;
 }
 
 .content__work-space__about-me__elem {
-    margin-right: 30px;
-    margin-bottom: 30px;
+   padding-bottom: 50px;
+    display: grid;
+    justify-content: center;
+    align-content: center;
 }
 
 .group-skills {
@@ -145,7 +148,7 @@
     left: 31.6%;
     width: 15px;
     height: 15px;
-    transform: rotate(-45deg) /* translate(-50%, -50%) */;
+    transform: rotate(-45deg);
     background:  svg-load('cross.svg', fill=#24241f, width=100%, height=100%);
   }
 }
