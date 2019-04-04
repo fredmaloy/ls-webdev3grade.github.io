@@ -1,330 +1,337 @@
 .my-works__container {
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    align-items: flex-start;
-
-    @include tablets {
-        align-items: center;
-    }
-
-    @include desktopHd {
-       align-items: center;
-    }
-
-    @include phones {
-        width: 100%;
-    }
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: flex-start;
+  @include desktop1135() {
+    align-items: center;
+  }
+  @include desktopHd {
+    align-items: center;
+  }
+  @include phones551 {
+    width: 100%;
+  }
 }
 
-.my-works__headline {   
-    font-size: 36px;
-    text-align: left;
-    font-weight: bold;
-    color: #475360;
-    padding-bottom: 100px;
-     padding: 100px 0;
-
-    @include tablets {
-        padding-bottom: 60px;
-        width: 39.375rem;
-    }
-
-    @include phones {
-        text-align: center;
-    }
-
-    @include desktopHd {
-        width: 100%;
-    }
-   
+.my-works__headline {
+  font-size: 36px;
+  text-align: left;
+  font-weight: bold;
+  color: #475360;
+  padding-bottom: 4.25rem;
+  
+  @include desktop1135() {
+    padding-bottom: 60px;
+    padding-top: 60px;
+    width: 39.375rem;
+  }
+  @include phones551 {
+    padding-top: 60px;
+    text-align: center;
+  }
+  @include desktopHd {
+    width: 100%;
+  }
 }
 
 .my-works__content {
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-
-    @include tablets {
-        flex-direction: column;
-        align-items: center;
-    }
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  @include desktop1135() {
+    flex-direction: column;
+    align-items: center;
+  }
 }
 
 .my-works__content-left {
-    margin-right: 150px;
-
-    @include tablets {
-        margin-right: 0;
-        padding-bottom: 50px;
-    }   
+  margin-right: 150px;
+  @include desktop1135() {
+    margin-right: 0;
+    padding-bottom: 50px;
+  }
 }
 
 .slider {
-    height: 50%;
-    width: 630px;
-    overflow: hidden;
-    position: relative; 
-    z-index: 100;
+  height: 50%;
+  width: 630px;
+  position: relative;
+  z-index: 10;
 
+  &:before {
+    content: attr(data-slide);
+    position: absolute;
+    font-size: 20rem;
+    color: #ececec;
+    font-weight: 800;
+    top: 50%;
+    left: 100%;
+    transform: translate(-24%, -64%);
+    margin: 0;
+    z-index: -1;
     @include desktopHd {
-        width: 975px;
+      font-size: 400px;
     }
-
-    @include phones {
-        width: 100%;
-    }
+  }
+  @include desktopHd {
+    width: 975px;
+  }
+  @include phones551 {
+    width: 100%;
+  }
 }
 
 .slider__background-elem {
-    display: none;
-    height: 100%;
-    width: 100%;
-   
-}
-
-.slider__background-elem__active {
-    display: block;
+  display: block;
+  height: 100%;
+  width: 100%;
 }
 
 .slider__background-image {
-    vertical-align: middle;
-    min-height: 100%;
-    min-width: 100%;
-    
+  vertical-align: middle;
+  min-height: 100%;
+  min-width: 100%;
+ 
 }
 
 .slider__content {
-    position: absolute;
-    top: 65%;
-    right: 0;
-    width: 21.4375rem;
-    height: 100px;
-    max-width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  position: absolute;
+  top: 65%;
+  right: 0;
+  width: 33.3rem;
+  height: 7rem;
+  max-width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  overflow: hidden;
 
-    @include desktopHd {
-        width: 710px;
-    }
-
-    @include phones {
-       display: none;
-    }
+  @include desktopHd {
+    width: 55.375rem;
+  }
+  @include phones551 {
+    display: none;
+  }
 }
 
 .slider__content-list {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  left: 0%;
 }
 
 .slider__content-elem {
-    width: 177px;
+  width: 177px;
+
+  &.active {
+    border: 3px solid #ed7f00;
+  }
 }
 
 .slider__elem-image {
-    width: 100%;
+  width: 100%;
 
-    &:hover {
-         border: 3px  solid #ed7f00;
-    }
-}
-
-.slider__content-elem__active {
-    border: 3px  solid #ed7f00;
+  &:hover {
+    border: 3px solid #ed7f00;
+  }
 }
 
 .preview__slider-container {
-    position: relative;
+  position: relative;
 }
 
 .slider__button {
-    position: absolute;
-    top: 65%;
-    right: -49px;
-    width: 50px;
-    height: 100px;
-    background-color: #2d3c4e;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: center;
-    z-index: 101;
-
-    @include phones {
-       top: 58%;
-        right: 0;
-    }
+  position: absolute;
+  top: 65%;
+  right: -49px;
+  width: 50px;
+  height: 112px;
+  background-color: #2d3c4e;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  z-index: 101;
+  cursor: pointer;
+  @include phones551 {
+    top: 58%;
+    right: 0;
+  }
 }
 
 .slider__button-arrow {
-    height: 15px;
-    width: 15px;
-    fill: #6c7783;
-    margin: 0;
-    cursor: pointer;
-    
-    
+  height: 15px;
+  width: 15px;
+  fill: #6c7783;
+  margin: 0;
+  cursor: pointer;
 
-    &:hover {
-        fill: #ffffff;
+  &:focus {
+    outline: none;
+  }
+
+  &:hover {
+    fill: #ffffff;
+  }
+
+  &.right {
+    transform: rotate(180deg);
+  }
+
+  &.white__style {
+    position: absolute;
+    fill: #ffffff;
+    transform: translate(-50%, -50%);
+
+    &.left {
+      transform: rotate(180deg) translate(50%, 50%);
+      top: 53%;
+      left: 47%;
     }
 
     &.right {
-        transform: rotate(180deg);
+      top: 47%;
+      left: 53%;
     }
-
-    &.white__style {
-        position: absolute;
-        fill: #ffffff;
-        transform: translate(-50%, -50%);
-
-        &.left {
-           transform: rotate(180deg) translate(50%, 50%); 
-           top: 53%;
-           left: 47%;
-        }
-
-        &.right {
-            top: 47%;
-            left: 53%;
-        }
-    }
+  }
 }
 
 .slider__number-slide {
-    position: absolute;
-    font-size: 300px;
-    color: #ececec;
-    font-weight: 800;
-    top: -100px;
-    right: -130px;
-    height: 300px;
-    margin: 0;
-
-    @include desktopHd {
-        font-size: 400px;
-        top: -5.25rem;
-        right: -10.125rem;
-    }
+  position: absolute;
+  font-size: 300px;
+  color: #ececec;
+  font-weight: 800;
+  top: -100px;
+  right: -130px;
+  height: 300px;
+  margin: 0;
+  @include desktopHd {
+    font-size: 400px;
+    top: -5.25rem;
+    right: -10.125rem;
+  }
 }
 
 .slider__number-slide__digit {
-    height: 100%;
-    margin: 0;
+  height: 100%;
+  margin: 0;
 }
 
 .loftschool__review {
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    flex-direction: column;
-
-    @include tablets {
-       align-items: center;
-
-    }
-
-   
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+  @include desktop1135() {
+    align-items: center;
+  }
 }
 
 .loftschool__review-site__link {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: #4b6fd7;
-    font-weight: bold;
-    font-size: 18px;
-    height: 30px;
-    padding-bottom: 5px;
-    cursor: pointer;
-    
-    &:hover {
-        border-bottom: 2px solid #4b6fd7;
-    }
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #4b6fd7;
+  font-weight: bold;
+  font-size: 18px;
+  height: 30px;
+  width: 196px;
+  padding-bottom: 5px;
+  cursor: pointer;
+  @include phones551 {
+    padding-bottom: 60px;
+  }
+
+  &:hover {
+    border-bottom: 2px solid #4b6fd7;
+  }
 }
 
 .loftschool__review-site__link-icon {
-    width: 15px;
-    height: 15px;
-    fill: #4b6fd7;
-    margin-bottom: 10px;
+  width: 15px;
+  height: 15px;
+  fill: #4b6fd7;
+  margin-bottom: 10px;
 }
 
 .loftschool__review-site__link-text {
-    margin-left: 10px;
-    text-align: end;
+  margin-left: 10px;
+  text-align: end;
 }
 
 .loftschool__review-tchnology__list {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding-bottom: 50px;
-
-     @include phones {
-         padding-bottom: 20px;
-    }
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 50px;
+  @include phones551 {
+    padding-bottom: 20px;
+  }
 }
 
 .loftschool__review-tchnology__elem {
-    margin-right: 20px;
-    padding: 20px 30px;
-    background-color: #f1f5f9;
-    border-radius: 30px;
-     font-size: 15px;
-     font-weight: 700;
-     color: #646d77;
+  margin-right: 20px;
+  padding: 20px 30px;
+  background-color: #f1f5f9;
+  border-radius: 30px;
+  font-size: 15px;
+  font-weight: 700;
+  color: #646d77;
 
-    &:last-child {
-        margin-right: 0;
-    }
-
-    @include phones {
-        padding: 15px 15px;
-        font-size: 13px;
-    }
+  &:last-child {
+    margin-right: 0;
+  }
+  @include phones551 {
+    padding: 15px 15px;
+    font-size: 13px;
+  }
 }
 
 .headline__color-black {
-    color: #2d3c4e;
-    font-weight: bold;
-    line-height: 1.6;
-    font-size: 30px;
-    padding-bottom: 50px;
-
-    @include tablets {
-       width: 100%;
-       text-align: center;
-       padding-bottom: 35px;
-    }
-
-    @include phones {
-        width: 90%;
-        text-align: left;
-        padding-bottom: 10px;
-        line-height: 1.2;
-    }
-
+  color: #2d3c4e;
+  font-weight: bold;
+  line-height: 1.6;
+  font-size: 30px;
+  padding-bottom: 50px;
+  @include desktop1135() {
+    width: 100%;
+    text-align: center;
+    padding-bottom: 35px;
+  }
+  @include phones551 {
+    width: 90%;
+    text-align: left;
+    padding-bottom: 10px;
+    line-height: 1.2;
+  }
 }
 
 .my-works__content-right {
-    @include tablets {
-       width: 100%;
-       text-align: center;
-    }
+  @include desktop1135() {
+    max-width: 630px;
+    text-align: center;
+  }
 }
 
 .loftschool__review-paragraph {
-    color: #9299a1;
-    padding-bottom: 50px;
+  color: #9299a1;
+  padding-bottom: 50px;
+  @include phones551 {
+    width: 90%;
+    text-align: left;
+    font-size: 14px;
+    padding-bottom: 20px;
+  }
+}
 
-     @include phones {
-        width: 90%;
-        text-align: left;
-        font-size: 14px;
-         padding-bottom: 20px;
-    }
+.loftschool__review-site {
+  @include desktop1135() {
+    display: flex;
+    align-items: cenetr;
+    justify-content: center;
+    padding-bottom: 60px;
+  }
 }

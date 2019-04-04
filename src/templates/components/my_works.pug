@@ -1,0 +1,66 @@
+script(type="text/x-template")#slider-container
+    .my-works__content
+        display(
+            :works="works"
+            :currentWork="currentWork"
+            @slide="handelSlide"
+            :currentIndex="currentIndex"
+        )
+        info(
+            :currentWork="currentWork"
+        )
+        
+        
+script(type="text/x-template")#slider-display
+    .my-works__content-left
+            .preview__slider-container  
+                .slider(:data-slide= "currentIndex + 1")
+                    .slider__background
+                        ul.slider__background-list
+                            li.slider__background-elem
+                                img(:src="currentWork.photo" alt="#").slider__background-image
+                        thumbs(
+                            :works="works"
+                            :currentWork="currentWork"                          
+                        )        
+                btns(
+                    @slide="direction => $emit('slide', direction)"
+                ) 
+                
+
+script(type="text/x-template")#slider-thumbs
+    .slider__content
+        ul.slider__content-list
+            li.slider__content-elem(v-for="work in works" :key="work.id" :class="{active: currentWork.id === work.id}")
+                img(:src="work.photo" alt="#").slider__elem-image
+
+
+script(type="text/x-template")#slider-btns                       
+    .slider__button
+        a(href="#" @click.prevent="$emit('slide', 'prev')").slider__button-arrow.right
+            +icon(`arrow-down`, '.slider__button-arrow__right-svg')
+        a(href="#" @click.prevent="$emit('slide', 'next')").slider__button-arrow.left
+            +icon(`arrow-down`, '.slider__button-arrow__left-svg')
+        
+
+script(type="text/x-template")#slider-info
+    .my-works__content-right
+            tags(
+                :tagsArray="tagsArray"
+            )
+            h3.headline__color-black {{currentWork.title}}     
+            p.loftschool__review-paragraph {{currentWork.desc}}
+            .loftschool__review-site
+                a.loftschool__review-site__link(:href="currentWork.link")
+                    .loftschool__review-site__link-icon
+                        +icon(`link`, 'loftschool__review-site__link-svg')
+                    .loftschool__review-site__link-text  
+                    |   Посмотреть сайт
+
+script(type="text/x-template")#slider-tags
+    .loftschool__review
+        .loftschool__review-tchnology
+            ul.loftschool__review-tchnology__list
+                li.loftschool__review-tchnology__elem(v-for="tag in tagsArray") 
+                    .tag {{tag}}
+                        

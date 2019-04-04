@@ -1,4 +1,4 @@
-footer.footer
+footer.footer(data-link)
     .container.footer__container
         .footer__content-column__one
             .year 
@@ -10,7 +10,12 @@ footer.footer
                     | Личный сайт веб разработчика
         .footer__content-column__two
             .navigation.footer__navigation
-                +navigation('navigation', ['Главная', 'Обо мне', 'Навыки', 'Работы', 'Отзывы', 'Связаться'], 0)
+                 +navigation('navigation', [{"title": "Главная" , "section": "#section__hero"},
+                {"title": "Обо мне" , "section": "#section__my-card"},
+                {"title": "Навыки" , "section": "#section__skills"},
+                {"title": "Работы" , "section": "#section__my-works"},
+                {"title": "Отзывы" , "section": "#section__comments"},
+                {"title": "Связаться" , "section": "#section__feedback"}], 0)
             .column__two-container
                 .column__two-left
                     .usefull

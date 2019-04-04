@@ -1,18 +1,13 @@
 .parallax {
   position: relative;
   overflow: hidden;
-  height: 100%;
+  min-height: 768px;
   width: 100%;
+  
   @include desktopHd {
     min-height: 1305px;
   }
 
-  /* @include tablets {
-    height: 1050px;
-  }
-  @include phones {
-    height: 820px;
-  } */
 }
 
 .parallax__layer {
@@ -28,7 +23,7 @@
       width: 100%;
       top: 0;
       left: 0;
-      @include tablets {
+      @include tablets848 {
         height: 36%;
       }
     }
@@ -40,9 +35,14 @@
       width: 100%;
       top: 28%;
       left: 0;
-      @include tablets {
+      @include tablets848 {
         height: 40%;
         top: 20%;
+      }
+
+      @include phones {
+        top: 20%;
+       height: 35%;
       }
     }
   }
@@ -59,7 +59,7 @@
         left: 50%;
         transform: translate(-50%, -50%) !important;
       }
-      @include tablets {
+      @include tablets848 {
         top: 32%;
         left: 50%;
         transform: translate(-50%, -50%) !important;
@@ -78,11 +78,12 @@
       width: 100%;
       top: 38%;
       left: 0;
-      @include tablets {
+      @include tablets848 {
         top: 37%;
         height: 35%;
       }
       @include phones {
+        height: 30%;
       }
     }
   }
@@ -93,10 +94,12 @@
       width: 100%;
       top: 70%;
       left: 0;
-      @include tablets {
+      @include tablets848 {
         top: 64%;
       }
       @include phones {
+        top: 60%;
+        height: 26%;
       }
     }
   }
@@ -105,13 +108,13 @@
     .parallax__bacground-image {
       position: absolute;
       width: 100%;
-      bottom: 0;
+     top: 72%;
       left: 0;
-      @include tablets {
-        margin-top: 24.5rem;
+      @include tablets848 {
+        top: 70%;
       }
       @include phones {
-        margin-top: 20.5rem;
+        
       }
     }
   }
@@ -120,13 +123,13 @@
     .parallax__bacground-image {
       position: absolute;
       width: 100%;
-      bottom: 0;
+      top: 72%;
       left: 0;
-      @include tablets {
-        margin-top: 24.5rem;
+      @include tablets848 {
+        
       }
       @include phones {
-        margin-top: 20.5rem;
+        
       }
     }
   }
@@ -198,6 +201,13 @@
 
 .hero__scroll-button {
   margin-bottom: 50px;
+  fill: #ffffff;
+
+  &:hover {
+   color: #ff9a00;
+   fill: #ff9a00;
+  }
+
   @include phones {
     display: none;
   }
@@ -228,9 +238,14 @@
 
 
 .hero__scroll-icon {
-  fill: #ffffff;
+ 
   width: 25px;
   height: 31px;
+  fill: inherit;
+
+  &:hover {
+   color: #ff9a00;
+  }
 }
 
 .hero__content-headline {
