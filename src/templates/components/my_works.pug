@@ -30,8 +30,16 @@ script(type="text/x-template")#slider-display
 
 script(type="text/x-template")#slider-thumbs
     .slider__content
-        ul.slider__content-list
-            li.slider__content-elem(v-for="work in works" :key="work.id" :class="{active: currentWork.id === work.id}")
+        ul.slider__content-list(
+                                ref="thumbs"
+                                :style="{left:`${move}px`}"
+                                )
+            li.slider__content-elem(
+                v-for="work in works"
+                :key="work.id"
+                :class="{active: currentWork.id === work.id}"
+                ref="thumb"
+            )
                 img(:src="work.photo" alt="#").slider__elem-image
 
 

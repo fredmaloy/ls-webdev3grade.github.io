@@ -15,9 +15,32 @@ const btns = {
 
 const thumbs = {
     template: "#slider-thumbs",
+
+    data() {
+        return {
+            move: 0,
+            thumbWidth: 0
+           /*  thumbsWidth: 0 */
+        }
+    },
+
     props: {
         works: Array,
         currentWork: Object
+    },
+
+    watch: {
+        currentIndex() {
+            const newThumbsWidth = this.thumbWidth * this.works.length;
+            if (newThumbsWidth > this.thumbWidth) {
+                this.move -= this.thumbWidth;
+            };
+        }
+    },
+
+    mounted() {
+        this.thumbWidth = this.$refs.thumb[0].offsetWidth
+        /* this.thumbsWidth = this.$refs.thumbs.offsetWidth */
     }
 }
 
@@ -60,7 +83,7 @@ new Vue({
     data() {
         return {
             works: [],
-            currentIndex: 2
+            currentIndex: 0
         };
     },
 
