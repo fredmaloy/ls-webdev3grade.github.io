@@ -21,12 +21,8 @@ section.section.section__about-me
                     a(href="#", title="Нажмите, чтобы прейти").navigation__reviews Отзывы    
     .content
       .container.content__continer
-        ul.content_list
-          li.content__elem
-            //include ./pug_admin/section_about-me.pug   
-          li.content__elem
-            include ./pug_admin/section_my-works.pug   
-          li.content__elem
-            //include ./pug_admin/section_reviews.pug               
+        //include ./pug_admin/section_about-me.pug   
+        //include ./pug_admin/section_my-works.pug   
+        include ./pug_admin/section_reviews.pug               
 </template>
 <style lang='pcss' src="./main_admin.pcss"></style>
