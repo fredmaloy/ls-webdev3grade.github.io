@@ -105,6 +105,10 @@
 .comments__content-list {
   width: 900px;
   
+   @include tablets {
+     width: 500px;
+  }
+
   @include phones598 {
     width: 100%;
     padding: 0 20px;
@@ -124,6 +128,7 @@
     margin-right: 0;
   }
   @include tablets {
+     width: 100%;
     flex: 1;
     margin-right: 55px;
   }

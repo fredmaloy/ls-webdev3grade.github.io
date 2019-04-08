@@ -19,28 +19,15 @@ const thumbs = {
     data() {
         return {
             move: 0,
-            thumbWidth: 0
-           /*  thumbsWidth: 0 */
+            thumbWidth: 0,
+            thumbsWidth: 0
         }
     },
 
     props: {
         works: Array,
-        currentWork: Object
-    },
-
-    watch: {
-        currentIndex() {
-            const newThumbsWidth = this.thumbWidth * this.works.length;
-            if (newThumbsWidth > this.thumbWidth) {
-                this.move -= this.thumbWidth;
-            };
-        }
-    },
-
-    mounted() {
-        this.thumbWidth = this.$refs.thumb[0].offsetWidth
-        /* this.thumbsWidth = this.$refs.thumbs.offsetWidth */
+        currentWork: Object,
+        currentIndex: Number
     }
 }
 
@@ -119,12 +106,17 @@ new Vue({
         },
 
         handelSlide(direction) {
-            switch (direction) {                
-                case "next": this.currentIndex++;
-                break;
-                case "prev": this.currentIndex--;
-                break;
-            }
+            switch (direction) {
+                case "next":
+                    const lastSlide = this.works[this.works.length - 1];
+                    this.works.unshift(lastSlide);
+                    this.works.pop();
+                  break;
+                case "prev":
+                this.works.push(this.works[0]);
+                this.works.shift();
+                  break;
+              }
         }
     },
 

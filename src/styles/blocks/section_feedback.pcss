@@ -34,7 +34,13 @@
 }
 
 .form {
-    width: 900px;
+    width: 80%;
+
+    @include tablets {
+        width: 90%;
+        justify-content: center; 
+    }
+
 }
 
 .form__title {
@@ -46,6 +52,11 @@
     display: flex;
     width: 100%;
     padding-bottom: 50px;
+
+    @include phones680() {
+     flex-direction: column;
+       
+    }
 }
 
 .form__block {
@@ -54,6 +65,15 @@
 
     &:last-child {
         margin-right: 0;
+    }
+
+    @include phones680() {
+     margin-right: 0;
+     padding-bottom: 50px;
+
+        &:last-child {
+            padding-bottom: 0;
+        }   
     }
 }
 
@@ -114,7 +134,13 @@
 }
 
 .btn__send {
-    margin-top: 10px;
+    margin-bottom: 30px;
+    
+    @include phones680() {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
 }
 
 .button {

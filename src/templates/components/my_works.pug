@@ -14,14 +14,15 @@ script(type="text/x-template")#slider-container
 script(type="text/x-template")#slider-display
     .my-works__content-left
             .preview__slider-container  
-                .slider(:data-slide= "currentIndex + 1")
+                .slider(:data-slide= "currentWork.id")
                     .slider__background
                         ul.slider__background-list
                             li.slider__background-elem
                                 img(:src="currentWork.photo" alt="#").slider__background-image
                         thumbs(
                             :works="works"
-                            :currentWork="currentWork"                          
+                            :currentWork="currentWork" 
+                            :currentIndex="currentIndex"                         
                         )        
                 btns(
                     @slide="direction => $emit('slide', direction)"
@@ -30,7 +31,7 @@ script(type="text/x-template")#slider-display
 
 script(type="text/x-template")#slider-thumbs
     .slider__content
-        ul.slider__content-list(
+        transition-group(name="slide" tag="ul").slider__content-list(
                                 ref="thumbs"
                                 :style="{left:`${move}px`}"
                                 )
