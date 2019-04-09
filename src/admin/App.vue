@@ -11,18 +11,24 @@ section.section.section__about-me
             .header__right-part
                 a(href='#', title="Нажмите, чтобы выйти").header__exit Выход
     nav.navigation
-        .container.navigation__continer 
-            ul.navigation__list
-                li.navigation__elem
-                    a(href="#", title="Нажмите, чтобы прейти").navigation__about-me Обо мне
-                li.navigation__elem     
-                    a(href="#", title="Нажмите, чтобы прейти").navigation__my-works Работы 
-                li.navigation__elem   
-                    a(href="#", title="Нажмите, чтобы прейти").navigation__reviews Отзывы    
+        navigation
     .content
-      .container.content__continer
-        //include ./pug_admin/section_about-me.pug   
-        //include ./pug_admin/section_my-works.pug   
-        include ./pug_admin/section_reviews.pug               
+        .container.content__continer
+            router-view                     
 </template>
+<script>
+
+
+import navigation from './components/navigation.vue';
+
+
+
+export default {
+    name: 'app',
+    components: {
+        navigation
+    }
+}
+</script>
+
 <style lang='pcss' src="./main_admin.pcss"></style>

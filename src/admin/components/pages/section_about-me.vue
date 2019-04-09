@@ -1,3 +1,4 @@
+<template lang="pug">
 section.content__section      
     .content__headline
         h1.headline__second-grade Блок &laquoОбо мне&raquo
@@ -62,4 +63,5 @@ section.content__section
                             input.input.title__skill(type="text", name="title-skill", placeholder="Новый навык") 
                             input.input.percent__skill(type="text", name="title-skill", placeholder="100%")
                             button.add__skill__btn 
+</template>
                             
