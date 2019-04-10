@@ -117,8 +117,15 @@ new Vue({
                 this.works.shift();
                   break;
               }
+        },
+
+        handleChange(index) {
+            const arr = this.works.splice(0, index);
+            this.works = [...this.works, ...arr];
         }
     },
+
+   
 
     created() {
         const data = require("../data/my_works.json");

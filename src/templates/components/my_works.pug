@@ -5,6 +5,7 @@ script(type="text/x-template")#slider-container
             :currentWork="currentWork"
             @slide="handelSlide"
             :currentIndex="currentIndex"
+            @change = "handleChange"
         )
         info(
             :currentWork="currentWork"
@@ -22,7 +23,8 @@ script(type="text/x-template")#slider-display
                         thumbs(
                             :works="works"
                             :currentWork="currentWork" 
-                            :currentIndex="currentIndex"                         
+                            :currentIndex="currentIndex"
+                            @change = "index => $emit('change', index)"                         
                         )        
                 btns(
                     @slide="direction => $emit('slide', direction)"
@@ -36,10 +38,11 @@ script(type="text/x-template")#slider-thumbs
                                 :style="{left:`${move}px`}"
                                 )
             li.slider__content-elem(
-                v-for="work in works"
+                v-for="(work, index) in works"
                 :key="work.id"
                 :class="{active: currentWork.id === work.id}"
                 ref="thumb"
+                @click = "$emit('change', index)"
             )
                 img(:src="work.photo" alt="#").slider__elem-image
 
