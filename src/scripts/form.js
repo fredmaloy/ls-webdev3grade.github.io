@@ -1,50 +1,57 @@
 import vue from 'vue';
-import { reset } from 'ansi-colors';
 
-new vue ({
-    template: "#form-container",
-    el: "#form-component",
+const feedbackError = {
+    template: "#feedback-input__error",
+    props: [
+        "texterror"
+    ]
+}
+
+
+const feedbackForm = {
+    template: "#feedback-form",
+    components: {
+        feedbackError
+    },
 
     data() {
         return {
-            errors: [],
+            nameerror: false,
+            emailerror: false,
+            commenterror: false,
             name: '',
             to: '',
-            comment: ''
+            comment: '',
+            renderkey: 0,
+            text: String,
+            nameError: 0
         }
     },
 
     computed: {
-        
-        isFormValid(e) {
 
-            e.prevent;
-            
+       
+        
+        isFormValid(e) {            
+
+            e.prevent; 
+           
             if (this.name && this.to && this.comment) {
                 return true;
-              }
-        
-              this.errors = [];
-        
-              if (!this.name) {
-                this.errors.push('Требуется указать имя');
-              }
-
-              if (!this.to) {
-                this.errors.push('Требуется указать email');
-              }
-
-              if (!this.comment) {
-                this.errors.push('Оставьте сообщение');
-              }   
+              };  
+            
         },
+
+        
+        
 
         isNameValid: function(e) {
             e.prevent;
             if (this.name) {
-                return true
+                return true; 
             }
         },
+
 
         isEmailValid: function(e) {
             e.prevent;
@@ -61,13 +68,20 @@ new vue ({
         },
     },
 
-    methods: {        
+    methods: {      
+        
+        
 
-        feedbackSend(e) {
-
+        feedbackSend(e) {  
+            
             e.prevent;
 
-            if (this.isFormValid) {            
+            
+
+            if (this.isFormValid) {  
+                var feedbackFormWindow = document.querySelector('.feedback-popup__container');
+                var bodyClass =  document.querySelector('.body');
+                var feedbackFormText = document.querySelector('.feedback-popup__error');
 
                 var formSend = new FormData();
                 formSend.append('phone','8(982)777-77-77');
@@ -83,27 +97,50 @@ new vue ({
 
                 xhr.responseType = 'json';
 
-
-
                 xhr.addEventListener('load', () => {
                     
                     if (xhr.response.status) {
-                        console.log('все ок на сервере'); 
-                        form.reset();                      
+                        console.log('Успешно отправлено'); 
+                        feedbackFormWindow.classList.add('feedback-popup__active');
+                        feedbackFormText.innerHTML = 'Сообщение отправлено';
+                        feedbackFormText.style.color = '#1b1f22';
+                        bodyClass.classList.add('body__active'); 
+                        this.name = '';
+                        this.to = '';
+                        this.comment = '';
+                        
                     }else{
                         console.log('Произошла ошибка');
+                        feedbackFormWindow.classList.add('feedback-popup__active');
+                        feedbackFormText.innerHTML = 'Произошла ошибка';
+                        feedbackFormText.style.color = '#cd1515';
+                        this.winti = "Произошла ошибка";
+                        bodyClass.classList.add('body__active'); 
                     };
 
-                    console.log(xhr.response.status);
-
                 });
-                
-                console.log("все ок");
-            }
-        }
+            
+            }else if (!this.name) { 
+                this.nameerror = true;                
+            }else if (!this.to) {
+                this.nameerror = false;
+                this.emailerror = true;                
+            }else if (!this.comment) {
+                this.nameerror = false; 
+                this.emailerror = false;
+                this.commenterror = true;               
+            };
+         
+        },               
     },
+}
 
-
+new vue ({
+    template: "#form-container",
+    el: "#form-component",
+    components: {
+        feedbackForm        
+    }
 });
 
 

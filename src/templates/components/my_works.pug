@@ -14,21 +14,21 @@ script(type="text/x-template")#slider-container
         
 script(type="text/x-template")#slider-display
     .my-works__content-left
-            .preview__slider-container  
-                .slider(:data-slide= "currentWork.id")
-                    .slider__background
-                        ul.slider__background-list
-                            li.slider__background-elem
-                                img(:src="currentWork.photo" alt="#").slider__background-image
-                        thumbs(
-                            :works="works"
-                            :currentWork="currentWork" 
-                            :currentIndex="currentIndex"
-                            @change = "index => $emit('change', index)"                         
-                        )        
-                btns(
-                    @slide="direction => $emit('slide', direction)"
-                ) 
+        .preview__slider-container  
+            .slider(:data-slide= "currentWork.id")
+                .slider__background
+                    ul.slider__background-list
+                        li.slider__background-elem
+                            img(:src="currentWork.photo" alt="#").slider__background-image
+                    thumbs(
+                        :works="works"
+                        :currentWork="currentWork" 
+                        :currentIndex="currentIndex"
+                        @change = "index => $emit('change', index)"                         
+                    )        
+            btns(
+                @slide="direction => $emit('slide', direction)"
+            ) 
                 
 
 script(type="text/x-template")#slider-thumbs
