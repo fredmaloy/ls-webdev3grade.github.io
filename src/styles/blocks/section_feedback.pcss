@@ -1,10 +1,6 @@
 
 .section__feedback-headline {
     padding-bottom: 100px;
-
-    @include phones {
-        padding-bottom: 60px;
-    }
 }
 
 .form__input-icon {
@@ -38,14 +34,13 @@
 }
 
 .form {
-    width: 900px;
+    width: 80%;
 
     @include tablets {
-        width: 95%;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
+        width: 90%;
+        justify-content: center; 
     }
+
 }
 
 .form__title {
@@ -58,23 +53,28 @@
     width: 100%;
     padding-bottom: 50px;
 
-     @include phones {
-       flex-direction: column; 
-       padding-bottom: 0;
+    @include phones680() {
+     flex-direction: column;
+       
     }
 }
 
 .form__block {
     margin-right: 50px;
     flex: 1;
+    position: relative;
 
     &:last-child {
         margin-right: 0;
     }
 
-    @include phones {
-       margin-right: 0;
-       padding-bottom: 35px;
+    @include phones680() {
+     margin-right: 0;
+     padding-bottom: 50px;
+
+        &:last-child {
+            padding-bottom: 0;
+        }   
     }
 }
 
@@ -96,26 +96,89 @@
     border-bottom: 1px solid #ffffff;
     height: 50px;
     padding-left: 50px;
+    
+
+    &:focus {
+        fill: #ee8400;
+        border-bottom: 1px solid #ee8400;
+    }
 
     &.name-input {
         background: svg-load('user.svg', fill=#9299a1, width=100%, height=100%) top left no-repeat;
-        background-size: 40px 40px;   
+        background-size: 40px 40px;
+
+        &:focus {
+            background: svg-load('user.svg', fill=#ee8400, width=100%, height=100%) top left no-repeat;
+            background-size: 40px 40px;
+        } 
+
+        &.filled {
+            background: svg-load('user.svg', fill=#ee8400, width=100%, height=100%) top left no-repeat;
+            background-size: 40px 40px;
+            border-bottom: 1px solid #ee8400;
+        } 
+
+        &.error {
+            background: svg-load('user.svg', fill=#cd1515, width=100%, height=100%) top left no-repeat;
+            background-size: 40px 40px;
+            border-bottom: 1px solid #cd1515;
+        } 
     }
 
     &.email-input {
         background: svg-load('envelope.svg', fill=#9299a1, width=100%, height=100%) top left no-repeat;
         background-size: 40px 40px;
+
+        &:focus {
+            background: svg-load('envelope.svg', fill=#ee8400, width=100%, height=100%) top left no-repeat;
+            background-size: 40px 40px;
+        }
+
+        &.filled {
+            background: svg-load('envelope.svg', fill=#ee8400, width=100%, height=100%) top left no-repeat;
+            background-size: 40px 40px;
+            border-bottom: 1px solid #ee8400;
+        }
+
+        &.error {
+            background: svg-load('envelope.svg', fill=#cd1515, width=100%, height=100%) top left no-repeat;
+            background-size: 40px 40px;
+            border-bottom: 1px solid #cd1515;
+        }
     }
 
     &.comment-textarea {
         background: svg-load('message.svg', fill=#9299a1, width=100%, height=100%) top left no-repeat;
         background-size: 40px 40px;
         height: 80px;
+
+        &:focus {
+            background: svg-load('message.svg', fill=#ee8400, width=100%, height=100%) top left no-repeat;
+            background-size: 40px 40px;
+        }
+
+        &.filled {
+            background: svg-load('message.svg', fill=#ee8400, width=100%, height=100%) top left no-repeat;
+            background-size: 40px 40px;
+            border-bottom: 1px solid #ee8400;
+        }
+
+         &.error {
+            background: svg-load('message.svg', fill=#cd1515, width=100%, height=100%) top left no-repeat;
+            background-size: 40px 40px;
+            border-bottom: 1px solid #cd1515;
+        }
     }
 }
 
 .btn__send {
-    margin-top: 10px;
+    margin-bottom: 30px;
+    
+    @include phones680() {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
 }
 
 .button {
@@ -130,17 +193,23 @@
     text-transform: uppercase;
     height: 80px;
     width: 350px;
-    background-color: #ee8400;
-    border-radius: rem(5px);
+    background-color: #9299a1;
+    border-radius: 5px;
     cursor: pointer;
     font-weight: bold;
 
-    &:hover {
+    
+
+    &.valid {
+        background-color: #ee8400;
+
+        &:hover {
         background: #ff8a00;
         background: -moz-linear-gradient(left, #ff8a00 1%, #ff9900 47%, #ff8a00 100%, #ff9d00 100%, #ff8a00 100%);
         background: -webkit-linear-gradient(left, #ff8a00 1%,#ff9900 47%,#ff8a00 100%,#ff9d00 100%,#ff8a00 100%); 
         background: linear-gradient(to right, #ff8a00 1%,#ff9900 47%,#ff8a00 100%,#ff9d00 100%,#ff8a00 100%); 
         
+        }
     }
 }
 
@@ -154,4 +223,44 @@
     @include phones {
         display: none;   
     }
+}
+
+.feedback-input__error {
+    position: absolute;
+    bottom: -60px;
+    left: 50%;
+    /* opacity: 0;
+    transition: opacity 0.3s; */
+
+    &.active-error{
+        opacity: 1;
+    }
+}
+
+
+.feedback-input__error-title {
+    content: "";
+    height: 50px;
+    min-width: 150px;
+    background-color: #cd1515;
+    position: relative;
+    border-radius: 5px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+
+    &:after {
+        position: absolute;
+        content: '';
+        top: -20px;
+        left: 30%;
+        border: 10px solid transparent;
+        border-bottom: 10px solid #cd1515; 
+    }
+}
+
+.feedback-input__error-text {  
+    font-size: 14px;
+    padding: 10px;
+    color: #ffffff;
 }

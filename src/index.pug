@@ -8,7 +8,7 @@ html(lang='rus')
     meta(http-equiv='X-UA-Compatible', content='ie=edge')
     script(src="./main.js")
     title Port
-  body
+  body.body
     .wrapper      
       include ./pug/section_hero
       include ./pug/section_myCard
@@ -16,11 +16,12 @@ html(lang='rus')
       include ./pug/section_my-works
       .section__autumn-background
         include ./pug/section_comments
-        include ./pug/section_feedback
+        #form-component        
       include ./pug/footer
-    include ./templates/entry.pug 
-    include ./pug/menu_popup.pug 
+      #feedback__popup-component
+    include ./templates/entry.pug
     
 
-        
-        
+
+
+

@@ -1,4 +1,4 @@
-section.section.section__hero
+section.section.section__hero#section__hero(data-link="section__hero")
   .parallax
     .parallax__layer(data-speed="0.1")
       +image('content/hero_parallax_layer1.png', 'parallax__bacground-image')
@@ -18,7 +18,7 @@ section.section.section__hero
       +image('content/hero_parallax_layer3.png', 'parallax__bacground-image')
     .parallax__layer(data-speed="0.9")
       +image('content/hero_parallax_layer4.png', 'parallax__bacground-image')
-    .parallax__layer(data-speed="0")
+    .parallax__layer(data-speed="0.8")
       +image('content/hero_parallax_layer5.png', 'parallax__bacground-image')
     .parallax__layer(data-speed="0")
       +image('content/hero_parallax_layer6.png', 'parallax__bacground-image')
@@ -28,7 +28,12 @@ section.section.section__hero
           a.header__logo-link(href='#')
             h2.headline_second-level.header__logo-init ЧС
           .navigation.header__navigation
-            +navigation('navigation', ['Главная', 'Обо мне', 'Навыки', 'Работы', 'Отзывы', 'Связаться'], 1)
+            +navigation('navigation', [{"title": "Главная" , "section": "#section__hero"},
+                {"title": "Обо мне" , "section": "#section__my-card"},
+                {"title": "Навыки" , "section": "#section__skills"},
+                {"title": "Работы" , "section": "#section__my-works"},
+                {"title": "Отзывы" , "section": "#section__comments"},
+                {"title": "Связаться" , "section": "#section__feedback"}], 0)
           .header__end
             .social.header__social
               ul.social__list
@@ -41,4 +46,5 @@ section.section.section__hero
         a(href="#").hero__scroll Скролл
           .hero__scroll-icon
             +icon(`scroll`, 'hero__scroll-icon__svg')
+include ./menu_popup.pug
 

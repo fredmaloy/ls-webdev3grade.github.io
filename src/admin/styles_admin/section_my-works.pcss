@@ -1,0 +1,144 @@
+.content__work-space__my-works  {
+  grid-area: "work-space";
+  display: grid;
+  grid-template-rows: 50rem 1fr;
+}
+
+.editing__content {
+    &.my-works {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+.load__image {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.load__image-continer {
+    width: 495px;
+    height: 277px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #4b535e;
+    border: 1px dashed #ffffff;
+}
+
+.load__image-hint {
+    width: 216px;
+    text-align: center;
+    padding-bottom: 50px;
+}
+
+.editing__work-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 0 30px;
+}
+
+.editing__work-form__block {
+    padding-bottom: 25px;
+    width: 100%;
+}
+
+.skills__tags-elem {
+    margin-right: 20px;
+    padding: 10px 20px;
+    background-color: #f1f5f9;
+    border-radius: 30px;
+    font-size: 15px;
+    font-weight: 700;
+    color: #646d77;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &:last-child {
+        margin-right: 0;
+    }
+}
+.tag {
+    padding-right: 5px;
+}
+
+.delete__tag {
+    content: '';
+    width: 12px;
+    height: 12px;
+    background:  svg-load('cross.svg', fill=#9299a1, width=100%, height=100%);
+
+    &:hover {
+        background:  svg-load('cross.svg', fill=#bf2929, width=100%, height=100%);
+    }
+}
+
+.works {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-column-gap: 30px;
+    /* grid-row-gap: 30px; */
+}
+
+.works__item  {
+    margin: 20px 0;
+    
+}
+
+.works__item__block {
+    display: grid;
+    height: 100%;
+    min-height: 555px;
+    grid-template-rows: 1fr 1fr 100px;
+    background-color: #1b1f22;
+    box-shadow: 3px 3px 5px #0f1112;
+}
+
+.works__item-content {
+    padding: 0 20px;
+}
+
+.works__item__headline {
+    padding: 20px 0;
+}
+
+.item-control__btns {
+    padding: 0 20px;
+}
+
+.works__item-paragraph {
+    padding-bottom: 20px;
+}
+
+.item-control__btns {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.control__btn {
+    background: transparent;
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    
+}
+
+.control__btn-title {
+    padding-right: 10px
+}
+
+.works__item-link {
+    color: #4b6fd7;
+    padding-bottom: 5px;
+
+    &:hover {
+    border-bottom: 1px solid #4b6fd7;
+    }
+}
+

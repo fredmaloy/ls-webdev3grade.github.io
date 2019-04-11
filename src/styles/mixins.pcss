@@ -10,8 +10,48 @@
   }
 }
 
+@mixin desktop1135() {
+  @media screen and (max-width: 1135px) {
+    @content;
+  }
+}
+
+@mixin destop955() {
+  @media screen and (max-width: 955px) {
+    @content;
+  }
+}
+
+@mixin tablets848() {
+  @media screen and (max-width: 848px) {
+    @content;
+  }
+}
 @mixin tablets() {
   @media screen and (max-width: $bp-tablets) {
+    @content;
+  }
+}
+
+@mixin phones680() {
+  @media screen and (max-width: 680px) {
+    @content;
+  }
+}
+
+@mixin phones598() {
+  @media screen and (max-width: 598px) {
+    @content;
+  }
+}
+
+@mixin phones551() {
+  @media screen and (max-width: 637px) {
+    @content;
+  }
+}
+@mixin phones521() {
+  @media screen and (max-width: 521px) {
     @content;
   }
 }

@@ -12,35 +12,32 @@
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
-  @include phones {
-    align-items: center;
-  }
-  @include phones {
+
+  @include phones598 {
     width: 100%;
     max-width: 100%;
+    align-items: center;
   }
 }
 
 .section__comments-headline {
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: flex-start;
   padding-bottom: 100px;
   @include tablets {
       
   }
-  @include phones {
+  @include phones598 {
     flex-direction: column;
     align-items: center;
     justify-content: center;
     padding-bottom: 20px;
   }
-  @include desktopHd {
-  }
 }
 
 .comments__headline {
-  @include phones {
+  @include phones598 {
     font-size: 24px;
     padding-bottom: 20px;
     text-align: center;
@@ -55,7 +52,8 @@
   align-items: center;
   width: 150px;
   height: 60px;
-  @include phones {
+
+  @include phones598 {
     margin-left: 0;
   }
 }
@@ -66,6 +64,11 @@
   position: relative;
   cursor: pointer;
   margin-right: 30px;
+  background: transparent;
+
+  &:focus {
+    outline: none;
+  }
 
   &:last-child {
     margin-right: 0;
@@ -87,37 +90,49 @@
 
 .comments__content {
   overflow: hidden;
+  width: 100vw;
+  
+}
+
+.flickity-slider {
   width: 100%;
 }
 
-/* .comments__content-list {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  overflow: hidden;
-  @include tablets {
-    width: 100%;
+.flickity-viewport {
+  height: 350px;
+}
+
+.comments__content-list {
+  width: 900px;
+  
+   @include tablets {
+     width: 500px;
   }
-  @include phones {
+
+  @include phones598 {
     width: 100%;
-    justify-content: flex-start;
+    padding: 0 20px;
   }
-} */
+}
+
 
 .comments__content-elem {
   display: flex;
   justify-content: center;
   align-items: flex-start;
-  /* margin-right: 80px; */
+  width: 50%;
+  min-height: 100%;
+  padding-right: 50px;
 
   &:last-child {
     margin-right: 0;
   }
   @include tablets {
+     width: 100%;
     flex: 1;
     margin-right: 55px;
   }
-  @include phones {
+  @include phones598 {
     width: 100%;
     margin-right: 0;
   }
@@ -125,12 +140,17 @@
 
 .quote {
   width: 60px;
+  margin-right: 20px;
   fill: #2c2d2c;
   fill-opacity: 0.7;
 }
 
 .comments__content-elem__feedback {
-  width: 360px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex: 1;
+  height: 100%;
 }
 
 .comments__content-elem__feedback-user-card {
@@ -142,14 +162,16 @@
 .feedback-user-card-image {
   width: 80px;
   height: 80px;
+  
 }
 
 .comments__content-elem__feedback-text {
-  height: 150px;
+  height: 15.375rem;
 }
 
 .feedback-user-card-info {
   margin-left: 30px;
+  flex: 1;
 }
 
 .feedback-user-card-name {
@@ -160,12 +182,4 @@
   @include tablets {
     padding-bottom: 10px;
   }
-}
-
-/* .flickity-slider {
-  left: 27.8125rem !important;  
-} */
-
-.flickity-viewport {
-  width: 900px !important;
 }

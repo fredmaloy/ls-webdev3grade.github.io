@@ -1,41 +1,137 @@
-var leftBtn = document.querySelector('.slider__button-arrow.left');
-        var rightBtn = document.querySelector('.slider__button-arrow.right');
-        const sliders = document.querySelector('.slider__content-list');
-        var rightBtnColor = document.querySelector('.section__slider-arrow__right__svg');
-        var leftBtnColor = document.querySelector('.section__slider-arrow__left__svg');
+console.log('1234');
 
-         let slidesView = 3;
-        var maxRight = (sliders.children.length - slidesView) * stepRight;
-        var stepRight = sliders.firstElementChild.getBoundingClientRect().width;
-        var minRight = 0;
-        let currentRight = 0;
+import Vue from 'vue';
 
+const tags = {
+    template: "#slider-tags",
+    props: {
+        tagsArray: Array
+    }
+}
 
-        rightBtn.addEventListener('click', e => {
-            if (currentRight < maxRight) {
-                e.preventDefault();
-                currentRight += stepRight;
-                sliders.style.right = `${currentRight}px`;
-                leftBtnColor.style.fill = `#ffff`;
-            } else if (currentRight = maxRight) {
-                sliders.style.right = maxRight + 'px';
-                rightBtnColor.style.fill = `rgb(46, 49, 51)`;
+const btns = {
+    template: "#slider-btns"
+}
 
-            }
-        })
+const thumbs = {
+    template: "#slider-thumbs",
 
-        leftBtn.addEventListener('click', e => {
-            if (currentRight > minRight) {
-                e.preventDefault();
-                currentRight -= stepRight;
-                sliders.style.right = `${currentRight}px`;
-                rightBtnColor.style.fill = `#ffff`;
+    data() {
+        return {
+            move: 0,
+            thumbWidth: 0,
+            thumbsWidth: 0
+        }
+    },
 
-            } else {
-                currentRight = minRight;
-                sliders.style.right = minRight + 'px';
-                leftBtnColor.style.fill = `rgb(46, 49, 51)`;
-            }
-        })
+    props: {
+        works: Array,
+        currentWork: Object,
+        currentIndex: Number
+    }
+}
+
+const display = {
+    template: "#slider-display",
+    components: {
+        btns,
+        thumbs
+    },
+    props: {
+        works: Array,
+        currentWork: Object,
+        currentIndex: Number 
+    },
+}
+
+const info = {
+    template: "#slider-info",
+    components: {
+        tags
+    },
+    props: {
+        currentWork: Object
+    },
+    computed: {
+        tagsArray() {
+           return this.currentWork.skills.split(','); 
+        }
+    }
+}
+
+new Vue({
+    template: "#slider-container",
+    el: "#slider-component",
+    components: {
+        display,
+        info
+    },
+
+    data() {
+        return {
+            works: [],
+            currentIndex: 0
+        };
+    },
+
+    computed: {
+        currentWork() {
+            return this.works[this.currentIndex]; 
+        }
+    },
+
+    watch: {
+        currentIndex(value) {
+           this.makeInfiniteLoopForCurIndex(value);
+        }
+    },
+
+    methods: {
+
+        makeArrWithRequiredImages(data) {
+            return data.map(item => {
+                const requiredPic = require(`../images/content/${item.photo}`);
+                item.photo = requiredPic;
+
+                return item
+            });
+        },
+
+        makeInfiniteLoopForCurIndex(value) {
+            
+            const workAmount = this.works.length - 1;            
+            if(value > workAmount) this.currentIndex = 0; 
+            if(value < 0) this.currentIndex = workAmount;
+
+        },
+
+        handelSlide(direction) {
+            switch (direction) {
+                case "next":
+                    const lastSlide = this.works[this.works.length - 1];
+                    this.works.unshift(lastSlide);
+                    this.works.pop();
+                  break;
+                case "prev":
+                this.works.push(this.works[0]);
+                this.works.shift();
+                  break;
+              }
+        },
+
+        handleChange(index) {
+            const arr = this.works.splice(0, index);
+            this.works = [...this.works, ...arr];
+        }
+    },
+
+   
+
+    created() {
+        const data = require("../data/my_works.json");
+        this.works = this.makeArrWithRequiredImages(data);    
+    }
+
+});
 
     

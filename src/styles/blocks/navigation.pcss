@@ -1,21 +1,22 @@
 .header__navigation {
-    @include tablets {
+    @include destop955 {
         display: none;
     }
 }
 
 .footer__navigation {
     display: flex;
+    align-items: flex-start;
 
     @include tablets {
-      align-items: flex-start;
+      
       justify-content: flex-start;
     }
 }
 
 .navigation__list {
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
     flex-wrap: wrap;
 
@@ -26,13 +27,9 @@
 
 .navigation__list-elem {
     margin-right: 50px;
-    padding-bottom: 10px;
+    padding: 10px;
     
     &:hover {
-        color: #9299a1;
-    }
-
-    &__active {
         color: #ff9a00;
         border-bottom: 1px solid  #ff9a00;
     }
