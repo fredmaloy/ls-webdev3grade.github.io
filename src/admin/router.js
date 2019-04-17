@@ -6,6 +6,7 @@ Vue.use(VueRouter);
 import about_me from './components/pages/section_about-me.vue';
 import my_works from './components/pages/section_my-works.vue';
 import reviews from './components/pages/section_reviews.vue';
+import login from './components/pages/login.vue'
 
 const routes = [
     {
@@ -22,6 +23,13 @@ const routes = [
         path: '/reviews',
         component: reviews
     },
+
+    {
+        path: '/login',
+        component: login
+    },
+
+
 ];
 
 export default new VueRouter({ routes });

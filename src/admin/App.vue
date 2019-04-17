@@ -1,5 +1,5 @@
 <template lang="pug">
-section.section.section__about-me
+section.admin
     header.header
         .container.header__continer
             .header__left-part
@@ -18,10 +18,7 @@ section.section.section__about-me
 </template>
 <script>
 
-
 import navigation from './components/navigation.vue';
-
-
 
 export default {
     name: 'app',
