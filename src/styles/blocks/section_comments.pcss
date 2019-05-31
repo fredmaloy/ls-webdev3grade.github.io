@@ -73,12 +73,19 @@
   &:last-child {
     margin-right: 0;
   }
+
+  &:hover {
+    .circle__comment {
+      display: block
+    }
+  }
 }
 
 .circle__comment {
   fill: transparent;
   stroke-width: 5px;
   stroke: #ffffff;
+  display: none;
 }
 
 .slider__comments-circle__svg {
@@ -182,4 +189,9 @@
   @include tablets {
     padding-bottom: 10px;
   }
+}
+
+.slider__button-arrow__size {
+  width: 15px;
+  height: 15px;
 }

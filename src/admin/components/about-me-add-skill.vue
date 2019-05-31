@@ -4,17 +4,18 @@
         type="text", 
         name="title-skill", 
         placeholder="Новый навык", 
-        v-model='skillobj.skilltitle',
-        @keydown.enter = 'addingSkill'
+        v-model='skillobj.skilltitle'
         ) 
     input.input.percent__skill(
         type="text", 
         name="title-skill", 
         placeholder="100%", 
         v-model='skillobj.skillpercent',
-        @keydown.enter = 'addingSkill'
         )
-    button.add__skill__btn(@click.prevent='addingSkill')  
+    button.add__skill__btn(
+        type='button',
+        @click.prevent='addingSkill'
+        )  
 </template>
 
 <script>

@@ -98,7 +98,7 @@
 .slider__content {
   position: absolute;
   top: 65%;
-  right: 0;
+  right: -2px;
   width: 33.3rem;
   height: 7rem;
   max-width: 100%;
@@ -146,7 +146,7 @@
 .slider__button {
   position: absolute;
   top: 65%;
-  right: -49px;
+  right: -50px;
   width: 50px;
   height: 112px;
   background-color: #2d3c4e;
@@ -163,8 +163,12 @@
 }
 
 .slider__button-arrow {
-  height: 15px;
-  width: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  height: 56px;
+  width: 50px;
   fill: #6c7783;
   margin: 0;
   cursor: pointer;
@@ -188,12 +192,12 @@
 
     &.left {
       transform: rotate(180deg) translate(50%, 50%);
-      top: 53%;
+      top: 50%;
       left: 47%;
     }
 
     &.right {
-      top: 47%;
+      top: 50%;
       left: 53%;
     }
   }
@@ -343,4 +347,8 @@
 
 .slide-move {
   transition: transform 0.3s;
+}
+
+.slider__button-arrow__size {
+  
 }

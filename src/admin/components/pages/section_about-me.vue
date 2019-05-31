@@ -16,32 +16,49 @@ section.content__section
             li.content__work-space__about-me__elem(v-if='addingGroup')
                 .group-skills
                     form.group-skills__form(action="#")
-                        headline
-                        skillslist(
-                            :skills = 'skills',
-                            @removeSkill = 'removeSkill'
-                        )                         
+                        headlineAddingGroup(
+                            @cancel="addingGroup=false"
+                        ) 
+                        ul.group-skills__list                     
                         addskill(
-                            @addingSkill='addingSkill'
+                            @addingSkill='addingSkill',
                         )               
+            li.content__work-space__about-me__elem(
+                v-for='category in categories'
+                :key = 'category.id'
+                )
+                addGroup(
+                    :category = "category",
+                    :skillsAdd = "filterSkillsByctegoryId(category.id)"
+                )
+                               
 </template>
 
 <script>
 
-import headline from '../about-me-headline';
-import skillslist from '../about-me-list';
+import headlineAddingGroup from '../about-me-headline';
 import addskill from '../about-me-add-skill';
+import addGroup from '../about-me-add-group';
+import {mapActions, mapState} from "vuex";
 
 
 export default {
     data() {
         return {
-            skills: [],
-            addingGroup: false
+            addingGroup: false,
         }
     },
     components: {
-        headline, skillslist, addskill
+         headlineAddingGroup, addskill, addGroup
+    },
+
+    computed: {
+      ...mapState('categories', {
+          categories: state => state.categories
+      }),   
+      ...mapState('skillsAdd', {
+          skillsAdd: state => state.skillsAdd
+      })   
     },
 
     methods: {
@@ -51,7 +68,29 @@ export default {
 
         removeSkill(skillId) {
            this.skills = this.skills.filter(item => item.id != skillId);
-        }
+        },
+
+        ...mapActions('categories', ['fetchCategories']),
+        ...mapActions('skillsAdd', ['fetchSkills']),
+       
+       filterSkillsByctegoryId(categoryId) {
+            return this.skillsAdd.filter(skill => skill.category === categoryId);
+        },
+
+    },
+
+    async created() {
+        try {
+           await this.fetchCategories();
+        } catch (error) {
+            alert('Произошла ошибка при добавлении категории');
+        };
+
+        try {
+            await this.fetchSkills();
+        } catch (error) {
+            alert('Произошла ошибка при добавлении элемента Skills');
+        };
     }
 }
 </script>

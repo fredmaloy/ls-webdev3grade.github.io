@@ -6,13 +6,15 @@ script(type="text/x-template")#commentsId
                 button.slider__comments-button__circle(@click="previous()")
                     svg.slider__comments-circle__svg(viewBox='0 0 100 100', preserveAspectRatio='none')
                         circle.circle__comment(cx='50', cy='50', r='40')
-                    .slider__button-arrow.left.white__style
-                        +icon(`arrow-down`, '.slider__button-arrow__left-svg')
+                    .slider__button-arrow.white__style.left
+                        .slider__button-arrow__size    
+                            +icon(`arrow-down`, '.slider__button-arrow__left-svg')
                 button.slider__comments-button__circle(@click="next()")
                     svg.slider__comments-circle__svg(viewBox='0 0 100 100', preserveAspectRatio='none')
                         circle.circle__comment(cx='50', cy='50', r='40')
-                    .slider__button-arrow.right.white__style
-                        +icon(`arrow-down`, '.slider__button-arrow__right-svg')        
+                    .slider__button-arrow.white__style.right
+                        .slider__button-arrow__size
+                            +icon(`arrow-down`, '.slider__button-arrow__right-svg')        
         .comments__content
             flickity(ref="flickity" :options="flickityOptions").comments__content-list
                 .comments__content-elem(v-for="comment in comments")

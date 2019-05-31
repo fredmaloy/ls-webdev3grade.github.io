@@ -50,9 +50,11 @@ script(type="text/x-template")#slider-thumbs
 script(type="text/x-template")#slider-btns                       
     .slider__button
         a(href="#" @click.prevent="$emit('slide', 'prev')").slider__button-arrow.right
-            +icon(`arrow-down`, '.slider__button-arrow__right-svg')
+            .slider__button-arrow__size
+                +icon(`arrow-down`, '.slider__button-arrow__right-svg')
         a(href="#" @click.prevent="$emit('slide', 'next')").slider__button-arrow.left
-            +icon(`arrow-down`, '.slider__button-arrow__left-svg')
+            .slider__button-arrow__size
+                +icon(`arrow-down`, '.slider__button-arrow__left-svg')
         
 
 script(type="text/x-template")#slider-info

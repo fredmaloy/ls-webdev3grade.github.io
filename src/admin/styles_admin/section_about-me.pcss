@@ -5,10 +5,15 @@
 
 .content__work-space__about-me__list {
     display: grid;
-    width:  1200px;
+    max-width: 1200px;
     grid-template-columns: 1fr 1fr;
+    grid-column-gap: 2.25rem;
     justify-content: center;
     align-items: center;
+
+    @include desktop1100 {
+       grid-template-columns: 1fr; 
+    }
 }
 
 .content__work-space__about-me__elem {

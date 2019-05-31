@@ -47,6 +47,8 @@
 }
 
 .footer__content-column__two {
+  display: flex;
+  flex-direction: column;
 
   @include tablets {
       align-items: flex-start;
@@ -93,14 +95,9 @@
 }
 
 .footer__socials-item {
-  border-radius: 50%;
-  border: 1px solid #9299a1;
   width: 50px;
   height: 50px;
-
-  &:hover {
-    border: 1px solid #ff9a00;
-  }
+  cursor: pointer;
 }
 
 .footer__social-icon {

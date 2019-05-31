@@ -1,19 +1,25 @@
 script(type="text/x-template")#skillsId
     .skills__level
         ul.skills__level-diagrams
-            li.skills__level-diagrams__row(v-for="skill in skills" :key="skill.skillsGroup")
+            li.skills__level-diagrams__row(
+                v-for="category in categories" 
+                :key="category.category"
+                )
                 skills-row(
-                    :skill="skill"
+                    :category='category'
+                    :skills="filterSkillsById(category.id)"              
                 )
                 
                 
 script(type="text/x-template")#skills-row
-    h4.headline-fourth-level {{skill.skillsGroup}}
+    h4.headline-fourth-level {{category.category}}
         ul.skills__level-diagrams__list
-            li.skills__level-diagrams__elem(v-for="(skillPercent, skillName) in skill.skills")
+            li.skills__level-diagrams__elem(
+                v-for="skill in skills" 
+                :key="skill.id"
+            )
                 skill(
-                    :skillName="skillName"
-                    :skillPercent="skillPercent"
+                   :skill="skill" 
                 )
 
 
@@ -22,4 +28,4 @@ script(type="text/x-template")#skill
         svg.skills__level-diagrams__svg(viewBox='0 0 100 100')
             circle.circle.circle__under(cx='50' cy='50' r='40')
             circle.circle.circle__above(cx='50' cy='50' r='40' ref="color-circle")
-        .skills__level-diagrams__tool {{skillName}}
+        .skills__level-diagrams__tool {{skill.title}}

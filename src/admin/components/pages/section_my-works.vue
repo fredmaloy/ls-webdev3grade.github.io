@@ -9,6 +9,7 @@
                     .load__image
                         .load__image-continer
                             .load__image-hint Перетащите или загрузите изображение
+                                input(type='file')
                             button.admin__btn
                                 .admin__btn-title Загрузить
                     .site__info

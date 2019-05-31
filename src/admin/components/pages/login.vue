@@ -18,7 +18,7 @@ section.login
             )
         .login__send
         button(type="submit").login__send-btn Отправить    
-        a.login__close(href="http://localhost:8080/")
+        a.login__close(href="https://fredmaloy.github.io/ls-webdev3grade.github.io")
 </template>
 
 <script>
@@ -43,8 +43,17 @@ export default {
 
     methods: {
         async login() {
-            const response = await $axios.post('/login', this.user);
-            console.log(response); 
+            try {
+                const {data: {token}} = await $axios.post('/login', this.user);
+            
+                localStorage.setItem("token", token);
+                $axios.defaults.headers["Authorization"] = `Bearer ${token}`;
+                this.$router.replace("/");
+
+            } catch (error) {
+                
+            }
+
         },
 
         close() {

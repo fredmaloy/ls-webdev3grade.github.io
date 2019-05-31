@@ -8,7 +8,7 @@
         )
     .group__btn
         button.group__btn-ok(@click.prevent = 'addSkillsGroup')
-        button.group__btn_cancel
+        button.group__btn_cancel(@click.prevent = "$emit('cancel', cancel)")
 </template>
 
 <script>
@@ -23,14 +23,14 @@ export default {
 
     methods: {
         ...mapActions('categories', ['addNewSkillGroup']),
-        async addSkillsGroup() {
-           try {
-                await this.addNewSkillGroup(this.skillTitle);
-                this.skillTitle = '';
-           } catch (error) {
-                alert(error.message);
-           }
-        }
+            async addSkillsGroup() {
+                try {
+                        await this.addNewSkillGroup(this.skillTitle);
+                        this.skillTitle = '';
+                } catch (error) {
+                        alert(error.message);
+                }
+            },
     }
 }
 </script>
