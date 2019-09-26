@@ -21,6 +21,16 @@ new Vue({
         }
     },
 
+    async created() {
+        try {
+            const resp = await axios.get('/reviews/94');
+            this.comments = resp.data;  
+            return resp;          
+        } catch (error) {
+          alert('произшла ошибка при получении отзывов')  
+        };
+    },
+
     methods: {
         arrWithRequiredImages(array) {
             return array.map(item => {
@@ -37,10 +47,6 @@ new Vue({
         previous() {
             this.$refs.flickity.previous();
         },
-    },
 
-    created() {
-        const comments = require('../data/comments.json');
-        this.comments = this.arrWithRequiredImages(comments);
-    }
+    },
 });

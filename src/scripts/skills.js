@@ -68,7 +68,7 @@ new Vue({
             const resp = await axios.get("/skills/94");
             this.skills = resp.data;
         } catch (error) {
-            alert('произшла ошибка приполучении скилов')
+            alert('произшла ошибка при получении скилов')
         };
     },
 
